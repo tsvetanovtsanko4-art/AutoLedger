@@ -1,0 +1,123 @@
+from typing import List, Optional
+from pydantic import BaseModel, ConfigDict
+from datetime import date
+from .models import FuelType, InsuranceType, TransmissionType, DriveType
+
+
+# ─── Auth ────────────────────────────────────────────────────────────────────
+
+class UserCreate(BaseModel):
+    email: str
+    password: str
+
+class UserLogin(BaseModel):
+    email: str
+    password: str
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+class UserOut(BaseModel):
+    id: int
+    email: str
+    model_config = ConfigDict(from_attributes=True)
+
+
+# ─── Insurance ───────────────────────────────────────────────────────────────
+
+class InsuranceBase(BaseModel):
+    type: InsuranceType
+    renewed_date: date
+    expiry_date: date
+
+class InsuranceCreate(InsuranceBase):
+    pass
+
+class Insurance(InsuranceBase):
+    id: int
+    car_id: int
+    model_config = ConfigDict(from_attributes=True)
+
+
+# ─── Inspection ──────────────────────────────────────────────────────────────
+
+class InspectionBase(BaseModel):
+    renewed_date: date
+    expiry_date: date
+
+class InspectionCreate(InspectionBase):
+    pass
+
+class Inspection(InspectionBase):
+    id: int
+    car_id: int
+    model_config = ConfigDict(from_attributes=True)
+
+
+# ─── Service ─────────────────────────────────────────────────────────────────
+
+class ServiceBase(BaseModel):
+    date: date
+    parts_list: Optional[List[str]] = []
+    part_numbers: Optional[List[str]] = []
+    next_service_date: Optional[date] = None
+    next_service_odometer: Optional[int] = None
+
+class ServiceCreate(ServiceBase):
+    pass
+
+class Service(ServiceBase):
+    id: int
+    car_id: int
+    model_config = ConfigDict(from_attributes=True)
+
+
+# ─── Refueling ───────────────────────────────────────────────────────────────
+
+class RefuelingBase(BaseModel):
+    date: date
+    fuel_type: FuelType
+    cost_eur: float
+    odometer: int
+
+class RefuelingCreate(RefuelingBase):
+    pass
+
+class Refueling(RefuelingBase):
+    id: int
+    car_id: int
+    model_config = ConfigDict(from_attributes=True)
+
+
+# ─── Car ─────────────────────────────────────────────────────────────────────
+
+class CarBase(BaseModel):
+    plate: str
+    make: str
+    model: str
+    model_year: Optional[int] = None
+    current_odometer: int = 0
+    vin: Optional[str] = None
+    engine_model: Optional[str] = None
+    engine_volume: Optional[float] = None
+    transmission: Optional[TransmissionType] = None
+    drive_type: Optional[DriveType] = None
+    tire_size: Optional[str] = None
+
+class CarCreate(CarBase):
+    pass
+
+class CarUpdate(BaseModel):
+    is_favorite: Optional[bool] = None
+
+class Car(CarBase):
+    id: int
+    user_id: int
+    is_favorite: bool
+    insurances: List[Insurance] = []
+    inspections: List[Inspection] = []
+    services: List[Service] = []
+    refuelings: List[Refueling] = []
+
+    model_config = ConfigDict(from_attributes=True)
