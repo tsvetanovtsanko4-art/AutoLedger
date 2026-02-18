@@ -1,0 +1,68 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+      target: development
+    container_name: car_tracker_server
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persist database file
+      - ./car_tracker.db:/app/car_tracker.db
+      # Mount source code for hot reloading
+      - ./server:/app/server
+    environment:
+      - DATABASE_URL=postgresql://user:password@db:5432/car_tracker
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    command: python -m uvicorn server.main:app --host 0.0.0.0 --port 8000 --reload
+    depends_on:
+      - db
+    restart: unless-stopped
+    networks:
+      - app_network
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+      target: development
+    image: car_tracker_client:dev
+    container_name: car_tracker_client_dev
+    ports:
+      - "5173:5173"
+    volumes:
+      # Map the source code for hot reloading
+      - ./client:/app
+      # Prevent node_modules from being overwritten by the bind mount
+      - /app/node_modules
+    environment:
+      - VITE_API_TARGET=http://server:8000
+    restart: unless-stopped
+    networks:
+      - app_network
+
+  db:
+    image: postgres:15
+    container_name: car_tracker_db
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=car_tracker
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - app_network
+    restart: unless-stopped
+
+volumes:
+  db_data:
+
+
+networks:
+  app_network:
+    driver: bridge

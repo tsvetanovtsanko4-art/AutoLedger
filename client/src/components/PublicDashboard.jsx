@@ -32,9 +32,9 @@ const PublicDashboard = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Cars by Make Chart */}
-                <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 min-w-0">
                     <h2 className="text-2xl font-bold mb-6 text-gray-800">Popularity by Manufacturer</h2>
-                    <div className="h-80">
+                    <div className="h-[400px] w-full" style={{ minHeight: '400px' }}>
                         <ResponsiveContainer width="100%" height="100%">
                             <BarChart data={stats.cars_by_make}>
                                 <CartesianGrid strokeDasharray="3 3" vertical={false} />
@@ -48,9 +48,9 @@ const PublicDashboard = () => {
                 </div>
 
                 {/* Spending by Year */}
-                <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 min-w-0">
                     <h2 className="text-2xl font-bold mb-6 text-gray-800">Global Spending Trends</h2>
-                    <div className="h-80">
+                    <div className="h-[400px] w-full" style={{ minHeight: '400px' }}>
                         <ResponsiveContainer width="100%" height="100%">
                             <LineChart data={stats.cost_by_year}>
                                 <CartesianGrid strokeDasharray="3 3" vertical={false} />
