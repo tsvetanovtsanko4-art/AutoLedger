@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line, Cell } from 'recharts';
 import api from '../api';
 import { Link } from 'react-router-dom';
 
@@ -18,6 +18,15 @@ const PublicDashboard = () => {
     if (!stats) return <div className="text-center p-20 text-gray-500">Stats unavailable.</div>;
 
     const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884d8', '#82ca9d'];
+    const FUEL_COLORS = ['#10B981', '#34D399', '#6EE7B7', '#A7F3D0', '#FBBF24', '#F59E0B', '#EF4444', '#F87171'];
+
+    // Prepare consumption chart data: top 20 models, sorted best->worst
+    const consumptionChart = (stats.consumption_by_model || [])
+        .slice(0, 20)
+        .map(item => ({
+            name: `${item.make} ${item.model}`,
+            l_per_100km: item.avg_l_per_100km,
+        }));
 
     return (
         <div className="space-y-12">
@@ -64,6 +73,29 @@ const PublicDashboard = () => {
                 </div>
             </div>
 
+            {/* Fuel Consumption by Model */}
+            {consumptionChart.length > 0 && (
+                <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <h2 className="text-2xl font-bold mb-2 text-gray-800">⛽ Average Fuel Consumption by Model</h2>
+                    <p className="text-gray-500 mb-6 text-sm">Community average L/100km — lower is better. Based on actual refueling logs.</p>
+                    <div className="h-[420px] w-full">
+                        <ResponsiveContainer width="100%" height="100%">
+                            <BarChart data={consumptionChart} layout="vertical" margin={{ left: 20, right: 40 }}>
+                                <CartesianGrid strokeDasharray="3 3" horizontal={false} />
+                                <XAxis type="number" domain={[0, 'dataMax + 2']} unit=" L" />
+                                <YAxis type="category" dataKey="name" width={130} tick={{ fontSize: 12 }} />
+                                <Tooltip formatter={(val) => [`${val} L/100km`, 'Avg Consumption']} />
+                                <Bar dataKey="l_per_100km" radius={[0, 4, 4, 0]}>
+                                    {consumptionChart.map((entry, idx) => (
+                                        <Cell key={idx} fill={FUEL_COLORS[idx % FUEL_COLORS.length]} />
+                                    ))}
+                                </Bar>
+                            </BarChart>
+                        </ResponsiveContainer>
+                    </div>
+                </div>
+            )}
+
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                 <h2 className="text-2xl font-bold mb-6 text-gray-800">Efficiency Insights</h2>
                 <p className="text-gray-500 mb-6 italic text-sm">*Average cost per km based on refueling logs across our community.</p>
@@ -71,13 +103,13 @@ const PublicDashboard = () => {
                     <table className="w-full text-left">
                         <thead>
                             <tr className="border-b border-gray-100 text-gray-400 uppercase text-xs font-bold tracking-wider">
-                                <th className="px-4 py-3">Make & Model</th>
+                                <th className="px-4 py-3">Make &amp; Model</th>
                                 <th className="px-4 py-3">Year</th>
                                 <th className="px-4 py-3 text-right">Avg Cost (€/km)</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-gray-50">
-                            {stats.consumption_by_car?.map((item, idx) => (
+                            {stats.consumption_by_car?.slice(0, 15).map((item, idx) => (
                                 <tr key={idx} className="hover:bg-gray-50 transition">
                                     <td className="px-4 py-4 font-medium text-gray-800">{item.make} {item.model}</td>
                                     <td className="px-4 py-4 text-gray-500">{item.model_year || 'N/A'}</td>

@@ -1,160 +1,265 @@
 import sys
 import os
+import random
+import uuid
+from datetime import date, timedelta
 
-# Add the server directory to the python path
 sys.path.append(os.path.join(os.getcwd(), 'server'))
 
-# We need to use absolute imports here because we are modifying sys.path 
-# and running this script directly, not as a module of the package.
-# However, the server files now use relative imports, so we need to trick them 
-# or import them as top-level modules if sys.path is correct.
-# Actually, since we appended 'server', we can import 'database' directly if we want,
-# BUT 'database.py' inside server might rely on relative imports if we change it.
-# Let's try running this script as a module from root: `python -m seed_data`? 
-# No, `seed_data.py` is in root.
-
-# If we run `python seed_data.py` from root:
-# sys.path has root.
-# `from server.database import ...` works.
-# Inside `server/database.py`, if it has relative imports, it might fail if not loaded as package.
-# But `server/models.py` has `from .database import Base`.
-# This requires `models` to be loaded as part of a package.
-# So we should probably run this script using `python -m seed_data` is tricky if it's in root.
-# Better approach: Move seed_data.py to root (it is), and script content:
-
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 from server.database import Base, engine, SessionLocal
 from server import models
-# from server.auth import hash_password # Importing this might be problematic without full app context
 from passlib.context import CryptContext
-from datetime import date, timedelta
-import random
 
 pwd_context = CryptContext(schemes=["pbkdf2_sha256"], deprecated="auto")
 
 def hash_password(password: str) -> str:
     return pwd_context.hash(password)
 
-def get_bulgarian_plate():
-    # Codes: CA (Sofia), CB (Sofia), C (Sofia), PB (Plovdiv), B (Varna), KH (Kyustendil), BT (Veliko Tarnovo)
-    regions = ["CA", "CB", "PB", "B", "KH", "BT", "CT", "TX"]
-    region = random.choice(regions)
-    numbers = f"{random.randint(1000, 9999)}"
-    letters = "".join(random.choices("ABEKMHOPCTYX", k=2)) # Standard cyrillic-looking latin letters used in plates
-    return f"{region} {numbers} {letters}"
+def get_bulgarian_plate(used: set) -> str:
+    regions = ["CA", "CB", "PB", "B", "KH", "BT", "CT", "TX", "E", "M", "OB", "VT", "H", "P", "C"]
+    for _ in range(1000):
+        region = random.choice(regions)
+        numbers = f"{random.randint(1000, 9999)}"
+        letters = "".join(random.choices("ABEKMHOPCTYX", k=2))
+        plate = f"{region}{numbers}{letters}"
+        if plate not in used:
+            used.add(plate)
+            return plate
+    raise RuntimeError("Could not generate unique plate")
+
+def unique_vin(used: set) -> str:
+    for _ in range(1000):
+        vin = f"W{random.choice('ABCDEFGHJ')}{random.randint(10000,99999)}P{random.randint(100000,999999)}"
+        if vin not in used:
+            used.add(vin)
+            return vin
+    raise RuntimeError("Could not generate unique VIN")
+
+# Engine ccm -> realistic fuel consumption (L/100km) range
+# Petrol/LPG: 1000ccm->6-8, 1500ccm->7-9, 2000ccm->9-11, 2500ccm->10-13, 3000ccm->12-15
+# Diesel:     1600ccm->5-6, 2000ccm->5.5-7, 3000ccm->7-9
+
+def consumption_for(engine_vol: float, fuel_type: str) -> tuple:
+    """Returns (min, max) L/100km range."""
+    cc = int(engine_vol * 1000)
+    if "DIESEL" in fuel_type or fuel_type == "DIESEL":
+        if cc <= 1600:   return (4.5, 6.0)
+        elif cc <= 2000: return (5.5, 7.0)
+        else:            return (6.5, 9.0)
+    else:  # Petrol / LPG
+        if cc <= 1000:   return (5.5, 8.0)
+        elif cc <= 1500: return (6.5, 9.0)
+        elif cc <= 2000: return (8.0, 11.0)
+        elif cc <= 2500: return (10.0, 13.0)
+        else:            return (12.0, 15.5)
+
+def tank_size(engine_vol: float) -> float:
+    """Realistic tank size based on engine volume."""
+    if engine_vol <= 1.0: return 40.0
+    elif engine_vol <= 1.5: return 45.0
+    elif engine_vol <= 2.0: return 55.0
+    elif engine_vol <= 2.5: return 60.0
+    else: return 70.0
+
+BRANDS_MODELS = {
+    "Toyota": [
+        {"model": "Corolla", "engine": "1.8 Hybrid", "vol": 1.8, "year": 2019, "trans": "CVT", "drive": "FWD", "fuel": "PETROL"},
+        {"model": "RAV4", "engine": "2.5 Hybrid", "vol": 2.5, "year": 2021, "trans": "CVT", "drive": "AWD", "fuel": "PETROL"},
+        {"model": "Yaris", "engine": "1.5 VVT-i", "vol": 1.0, "year": 2018, "trans": "MANUAL", "drive": "FWD", "fuel": "PETROL"},
+        {"model": "Camry", "engine": "2.5 Hybrid", "vol": 2.5, "year": 2020, "trans": "CVT", "drive": "FWD", "fuel": "PETROL"},
+        {"model": "Land Cruiser", "engine": "3.0 D-4D", "vol": 3.0, "year": 2017, "trans": "AUTOMATIC", "drive": "AWD", "fuel": "DIESEL"},
+    ],
+    "Subaru": [
+        {"model": "Outback", "engine": "2.5 Boxer", "vol": 2.5, "year": 2017, "trans": "CVT", "drive": "AWD", "fuel": "PETROL"},
+        {"model": "Forester", "engine": "2.0 Boxer", "vol": 2.0, "year": 2020, "trans": "CVT", "drive": "AWD", "fuel": "PETROL"},
+        {"model": "Impreza", "engine": "2.0 Boxer", "vol": 2.0, "year": 2016, "trans": "MANUAL", "drive": "AWD", "fuel": "PETROL"},
+    ],
+    "Dacia": [
+        {"model": "Duster", "engine": "1.5 dCi", "vol": 1.5, "year": 2018, "trans": "MANUAL", "drive": "AWD", "fuel": "DIESEL"},
+        {"model": "Sandero", "engine": "1.0 TCe", "vol": 1.0, "year": 2021, "trans": "MANUAL", "drive": "FWD", "fuel": "PETROL"},
+        {"model": "Logan", "engine": "1.6 MPI", "vol": 1.6, "year": 2015, "trans": "MANUAL", "drive": "FWD", "fuel": "PETROL"},
+    ],
+    "VW": [
+        {"model": "Golf VII", "engine": "2.0 TDI", "vol": 2.0, "year": 2016, "trans": "DCT", "drive": "FWD", "fuel": "DIESEL"},
+        {"model": "Passat", "engine": "2.0 TDI", "vol": 2.0, "year": 2019, "trans": "DCT", "drive": "FWD", "fuel": "DIESEL"},
+        {"model": "Tiguan", "engine": "2.0 TSI", "vol": 2.0, "year": 2020, "trans": "DCT", "drive": "AWD", "fuel": "PETROL"},
+        {"model": "Polo", "engine": "1.0 TSI", "vol": 1.0, "year": 2021, "trans": "AUTOMATIC", "drive": "FWD", "fuel": "PETROL"},
+        {"model": "T-Roc", "engine": "1.5 TSI", "vol": 1.5, "year": 2022, "trans": "DCT", "drive": "FWD", "fuel": "PETROL"},
+    ],
+    "Audi": [
+        {"model": "A4", "engine": "2.0 TDI", "vol": 2.0, "year": 2017, "trans": "DCT", "drive": "AWD", "fuel": "DIESEL"},
+        {"model": "Q5", "engine": "3.0 TDI", "vol": 3.0, "year": 2018, "trans": "AUTOMATIC", "drive": "AWD", "fuel": "DIESEL"},
+        {"model": "A3", "engine": "1.5 TFSI", "vol": 1.5, "year": 2020, "trans": "DCT", "drive": "FWD", "fuel": "PETROL"},
+        {"model": "Q3", "engine": "1.5 TFSI", "vol": 1.5, "year": 2021, "trans": "AUTOMATIC", "drive": "FWD", "fuel": "PETROL"},
+    ],
+    "BMW": [
+        {"model": "320d", "engine": "2.0 Diesel", "vol": 2.0, "year": 2015, "trans": "AUTOMATIC", "drive": "RWD", "fuel": "DIESEL"},
+        {"model": "X5", "engine": "3.0d", "vol": 3.0, "year": 2019, "trans": "AUTOMATIC", "drive": "AWD", "fuel": "DIESEL"},
+        {"model": "116i", "engine": "1.5 Petrol", "vol": 1.5, "year": 2016, "trans": "MANUAL", "drive": "FWD", "fuel": "PETROL"},
+        {"model": "X1", "engine": "2.0d", "vol": 2.0, "year": 2018, "trans": "AUTOMATIC", "drive": "AWD", "fuel": "DIESEL"},
+    ],
+    "Skoda": [
+        {"model": "Octavia", "engine": "1.6 TDI", "vol": 1.6, "year": 2018, "trans": "MANUAL", "drive": "FWD", "fuel": "DIESEL"},
+        {"model": "Superb", "engine": "2.0 TDI", "vol": 2.0, "year": 2020, "trans": "DCT", "drive": "AWD", "fuel": "DIESEL"},
+        {"model": "Fabia", "engine": "1.0 MPI", "vol": 1.0, "year": 2019, "trans": "MANUAL", "drive": "FWD", "fuel": "PETROL"},
+        {"model": "Kodiaq", "engine": "2.0 TDI", "vol": 2.0, "year": 2021, "trans": "AUTOMATIC", "drive": "AWD", "fuel": "DIESEL"},
+    ],
+    "Mercedes": [
+        {"model": "C220d", "engine": "2.0 Diesel", "vol": 2.0, "year": 2019, "trans": "AUTOMATIC", "drive": "RWD", "fuel": "DIESEL"},
+        {"model": "E300", "engine": "2.0 Petrol", "vol": 2.0, "year": 2018, "trans": "AUTOMATIC", "drive": "AWD", "fuel": "PETROL"},
+        {"model": "A200", "engine": "1.4 Petrol", "vol": 1.4, "year": 2021, "trans": "DCT", "drive": "FWD", "fuel": "PETROL"},
+    ],
+    "Ford": [
+        {"model": "Focus", "engine": "1.5 EcoBoost", "vol": 1.5, "year": 2018, "trans": "MANUAL", "drive": "FWD", "fuel": "PETROL"},
+        {"model": "Kuga", "engine": "1.5 EcoBlue", "vol": 1.5, "year": 2020, "trans": "AUTOMATIC", "drive": "AWD", "fuel": "DIESEL"},
+        {"model": "Fiesta", "engine": "1.0 EcoBoost", "vol": 1.0, "year": 2019, "trans": "MANUAL", "drive": "FWD", "fuel": "PETROL"},
+    ],
+    "Opel": [
+        {"model": "Astra K", "engine": "1.6 CDTI", "vol": 1.6, "year": 2017, "trans": "MANUAL", "drive": "FWD", "fuel": "DIESEL"},
+        {"model": "Insignia", "engine": "2.0 CDTI", "vol": 2.0, "year": 2018, "trans": "AUTOMATIC", "drive": "FWD", "fuel": "DIESEL"},
+        {"model": "Crossland", "engine": "1.2 Turbo", "vol": 1.2, "year": 2021, "trans": "MANUAL", "drive": "FWD", "fuel": "PETROL"},
+    ],
+    "Renault": [
+        {"model": "Megane", "engine": "1.5 dCi", "vol": 1.5, "year": 2018, "trans": "MANUAL", "drive": "FWD", "fuel": "DIESEL"},
+        {"model": "Clio", "engine": "1.0 TCe", "vol": 1.0, "year": 2020, "trans": "MANUAL", "drive": "FWD", "fuel": "PETROL"},
+        {"model": "Koleos", "engine": "2.0 dCi", "vol": 2.0, "year": 2019, "trans": "CVT", "drive": "AWD", "fuel": "DIESEL"},
+    ],
+    "Hyundai": [
+        {"model": "Tucson", "engine": "1.6 T-GDi", "vol": 1.6, "year": 2021, "trans": "DCT", "drive": "AWD", "fuel": "PETROL"},
+        {"model": "i30", "engine": "1.5 T-GDi", "vol": 1.5, "year": 2020, "trans": "MANUAL", "drive": "FWD", "fuel": "PETROL"},
+    ],
+    "Kia": [
+        {"model": "Sportage", "engine": "1.6 T-GDi", "vol": 1.6, "year": 2021, "trans": "DCT", "drive": "AWD", "fuel": "PETROL"},
+        {"model": "Ceed", "engine": "1.5 T-GDi", "vol": 1.5, "year": 2020, "trans": "DCT", "drive": "FWD", "fuel": "PETROL"},
+    ],
+}
+
+ALL_CAR_SPECS = []
+for brand, models_list in BRANDS_MODELS.items():
+    for data in models_list:
+        ALL_CAR_SPECS.append({"make": brand, **data})
 
 def seed_data():
     db = SessionLocal()
+    NUM_USERS = 1000
+    TOTAL_CARS = 3000
+    used_plates = set()
+    used_vins = set()
+
     try:
-        # Re-create tables
         models.Base.metadata.drop_all(bind=engine)
         models.Base.metadata.create_all(bind=engine)
 
-        print("Seeding data with Bulgarian cars...")
+        print(f"Seeding {NUM_USERS} users and {TOTAL_CARS} cars...")
 
-        # Create Users
         users = []
-        user_emails = ["demo@example.com", "user@example.com", "admin@example.com"]
-        for email in user_emails:
-            user = models.User(
-                email=email,
+        named = [
+            ("demo@example.com", "password123"),
+            ("user@example.com", "password123"),
+            ("admin@example.com", "password123"),
+        ]
+        for email, pw in named:
+            u = models.User(email=email, hashed_password=hash_password(pw))
+            db.add(u)
+            users.append(u)
+        db.commit()
+
+        for i in range(NUM_USERS - len(named)):
+            u = models.User(
+                email=f"user{i+1}@autoledger.test",
                 hashed_password=hash_password("password123")
             )
-            db.add(user)
-            users.append(user)
+            db.add(u)
+            users.append(u)
         db.commit()
 
-        # Car Data
-        brands_models = {
-            "Toyota": [
-                {"model": "Corolla", "engine": "1.8 Hybrid", "vol": 1.8, "year": 2019, "trans": "CVT", "drive": "FWD"},
-                {"model": "RAV4", "engine": "2.5 Hybrid", "vol": 2.5, "year": 2021, "trans": "CVT", "drive": "AWD"},
-                {"model": "Yaris", "engine": "1.5 VVT-i", "vol": 1.5, "year": 2018, "trans": "MANUAL", "drive": "FWD"}
-            ],
-            "Subaru": [
-                {"model": "Outback", "engine": "2.5 Boxer", "vol": 2.5, "year": 2017, "trans": "CVT", "drive": "AWD"},
-                {"model": "Forester", "engine": "2.0 Boxer", "vol": 2.0, "year": 2020, "trans": "CVT", "drive": "AWD"}
-            ],
-            "Dacia": [
-                {"model": "Duster", "engine": "1.5 dCi", "vol": 1.5, "year": 2018, "trans": "MANUAL", "drive": "AWD"},
-                {"model": "Sandero", "engine": "1.0 TCe", "vol": 1.0, "year": 2021, "trans": "MANUAL", "drive": "FWD"}
-            ],
-            "VW": [
-                {"model": "Golf VII", "engine": "2.0 TDI", "vol": 2.0, "year": 2016, "trans": "DCT", "drive": "FWD"},
-                {"model": "Passat", "engine": "2.0 TDI", "vol": 2.0, "year": 2019, "trans": "DCT", "drive": "FWD"},
-                {"model": "Tiguan", "engine": "2.0 TSI", "vol": 2.0, "year": 2020, "trans": "DCT", "drive": "AWD"}
-            ],
-            "Audi": [
-                {"model": "A4", "engine": "2.0 TDI", "vol": 2.0, "year": 2017, "trans": "DCT", "drive": "AWD"},
-                {"model": "Q5", "engine": "3.0 TDI", "vol": 3.0, "year": 2018, "trans": "AUTOMATIC", "drive": "AWD"}
-            ],
-            "BMW": [
-                {"model": "320d", "engine": "2.0 Diesel", "vol": 2.0, "year": 2015, "trans": "AUTOMATIC", "drive": "RWD"},
-                {"model": "X5", "engine": "3.0d", "vol": 3.0, "year": 2019, "trans": "AUTOMATIC", "drive": "AWD"}
-            ],
-            "Skoda": [
-                {"model": "Octavia", "engine": "1.6 TDI", "vol": 1.6, "year": 2018, "trans": "MANUAL", "drive": "FWD"},
-                {"model": "Superb", "engine": "2.0 TDI", "vol": 2.0, "year": 2020, "trans": "DCT", "drive": "AWD"}
-            ]
-        }
+        print(f"Created {len(users)} users.")
 
-        cars = []
-        for brand, models_list in brands_models.items():
-            for data in models_list:
-                # Randomly assign to a user
-                owner = random.choice(users)
-                
-                car = models.Car(
-                    user_id=owner.id,
-                    plate=get_bulgarian_plate(),
-                    make=brand,
-                    model=data["model"],
-                    model_year=data["year"],
-                    current_odometer=random.randint(20000, 250000),
-                    vin=f"W{random.choice('ABCDEF')}{random.randint(10000,99999)}P{random.randint(100000,999999)}",
-                    engine_model=data["engine"],
-                    engine_volume=data["vol"],
-                    transmission=getattr(models.TransmissionType, data["trans"]),
-                    drive_type=getattr(models.DriveType, data["drive"]),
-                    is_favorite=random.choice([True, False])
-                )
-                db.add(car)
-                cars.append(car)
-        
+        cars_objs = []
+        for i in range(TOTAL_CARS):
+            owner = users[i % len(users)]
+            spec = random.choice(ALL_CAR_SPECS)
+            odometer = random.randint(15000, 280000)
+            car = models.Car(
+                user_id=owner.id,
+                plate=get_bulgarian_plate(used_plates),
+                make=spec["make"],
+                model=spec["model"],
+                model_year=spec["year"],
+                current_odometer=odometer,
+                vin=unique_vin(used_vins),
+                engine_model=spec["engine"],
+                engine_volume=spec["vol"],
+                transmission=getattr(models.TransmissionType, spec["trans"]),
+                drive_type=getattr(models.DriveType, spec["drive"]),
+                is_favorite=random.choice([True, False])
+            )
+            db.add(car)
+            cars_objs.append((car, spec))
+
         db.commit()
+        print(f"Created {TOTAL_CARS} cars.")
 
-        # Create Record Data
-        for car in cars:
-            # Refuelings
-            for _ in range(random.randint(3, 10)):
-                cost = random.uniform(50, 120)
-                fuel = models.FuelType.DIESEL if "TDI" in car.engine_model or "d" in car.engine_model or "dCi" in car.engine_model else models.FuelType.PETROL
-                
+        # Refuelings with realistic consumption
+        for car, spec in cars_objs:
+            fuel_type_str = spec["fuel"]
+            fuel = getattr(models.FuelType, fuel_type_str)
+            tank = tank_size(spec["vol"])
+            cons_min, cons_max = consumption_for(spec["vol"], fuel_type_str)
+
+            num_refuels = random.randint(4, 14)
+            odo = max(1000, car.current_odometer - random.randint(10000, 120000))
+
+            for _ in range(num_refuels):
+                # Realistic L/100km for this engine type
+                l_per_100 = random.uniform(cons_min, cons_max)
+                # Simulate a realistic range fill: km driven since last fill
+                qty = round(random.uniform(tank * 0.5, tank * 0.95), 2)
+                km_driven = round(qty / (l_per_100 / 100))
+
+                odo = min(odo + km_driven, car.current_odometer)
+
+                # Price: diesel ~1.75, petrol ~1.90 per liter
+                price_per_l = random.uniform(1.70, 1.95) if fuel_type_str == "DIESEL" else random.uniform(1.80, 2.05)
+                cost = round(qty * price_per_l, 2)
+
                 refueling = models.Refueling(
                     car_id=car.id,
-                    date=date.today() - timedelta(days=random.randint(1, 600)),
+                    date=date.today() - timedelta(days=random.randint(1, 730)),
                     fuel_type=fuel,
                     cost_eur=cost,
-                    odometer=car.current_odometer - random.randint(100, 5000)
+                    quantity_liters=qty,
+                    odometer=odo
                 )
                 db.add(refueling)
-            
+
             # Service
             service = models.Service(
                 car_id=car.id,
-                date=date.today() - timedelta(days=random.randint(30, 300)),
-                parts_list=["Oil Change", "Filter Replacement"],
-                next_service_odometer=car.current_odometer + 10000
+                date=date.today() - timedelta(days=random.randint(30, 500)),
+                parts_list=random.choice([
+                    ["Oil Change", "Oil Filter"],
+                    ["Oil Change", "Air Filter", "Cabin Filter"],
+                    ["Brake Pads Front"],
+                    ["Oil Change", "Spark Plugs"],
+                    ["Timing Belt", "Water Pump"],
+                ]),
+                next_service_odometer=car.current_odometer + random.randint(5000, 15000)
             )
             db.add(service)
 
         db.commit()
-        print(f"Seeding complete! Added {len(cars)} cars.")
-        print("Login credentials: demo@example.com / password123")
+        print("Seeding complete!")
+        print("Login credentials:")
+        for email, pw in named:
+            print(f"  {email} / {pw}")
+        print(f"  user1@autoledger.test ... user997@autoledger.test / password123")
 
     except Exception as e:
+        db.rollback()
         print(f"Error seeding data: {e}")
+        import traceback
+        traceback.print_exc()
         raise
     finally:
         db.close()

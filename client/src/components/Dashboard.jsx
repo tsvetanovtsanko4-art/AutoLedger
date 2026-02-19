@@ -5,6 +5,7 @@ import api from '../api';
 const Dashboard = () => {
     const [cars, setCars] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [consumption, setConsumption] = useState({});
 
     useEffect(() => {
         fetchCars();
@@ -13,7 +14,15 @@ const Dashboard = () => {
     const fetchCars = async () => {
         try {
             const response = await api.get('/me/cars');
-            setCars(response.data);
+            const carsData = response.data;
+            setCars(carsData);
+            // Fetch avg consumption for each car in parallel
+            const results = await Promise.allSettled(
+                carsData.map(c => api.get(`/cars/${c.id}/avg-consumption`).then(r => ({ id: c.id, data: r.data })))
+            );
+            const map = {};
+            results.forEach(r => { if (r.status === 'fulfilled') map[r.value.id] = r.value.data; });
+            setConsumption(map);
         } catch (error) {
             console.error("Error fetching cars:", error);
         } finally {
@@ -96,8 +105,15 @@ const Dashboard = () => {
                                             <p className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-1">Mileage</p>
                                             <p className="text-xl font-bold text-gray-800">{car.current_odometer.toLocaleString()} <span className="text-gray-400 font-medium text-sm">km</span></p>
                                         </div>
-                                        <div className="text-blue-500 font-bold text-sm tracking-tight flex items-center group-hover:translate-x-1 transition-transform">
-                                            VIEW DETAILS <span className="ml-1">→</span>
+                                        <div className="text-right">
+                                            {consumption[car.id]?.avg_l_per_100km != null ? (
+                                                <>
+                                                    <p className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-1">Avg Fuel</p>
+                                                    <p className="text-lg font-bold text-emerald-600">{consumption[car.id].avg_l_per_100km} <span className="text-gray-400 font-medium text-xs">L/100km</span></p>
+                                                </>
+                                            ) : (
+                                                <p className="text-xs text-gray-300 italic">No fuel data</p>
+                                            )}
                                         </div>
                                     </div>
                                 </div>

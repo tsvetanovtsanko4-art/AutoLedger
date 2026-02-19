@@ -45,7 +45,7 @@ class Car(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"))
-    plate = Column(String, index=True)
+    plate = Column(String, index=True, unique=True)
     make = Column(String)
     model = Column(String)
     model_year = Column(Integer, nullable=True)
@@ -53,7 +53,7 @@ class Car(Base):
     is_favorite = Column(Boolean, default=False)
 
     # Extended fields
-    vin = Column(String, nullable=True)
+    vin = Column(String, nullable=True, unique=True)
     engine_model = Column(String, nullable=True)
     engine_volume = Column(Float, nullable=True)
     transmission = Column(Enum(TransmissionType), nullable=True)
@@ -65,6 +65,7 @@ class Car(Base):
     inspections = relationship("Inspection", back_populates="car", cascade="all, delete-orphan")
     services = relationship("Service", back_populates="car", cascade="all, delete-orphan")
     refuelings = relationship("Refueling", back_populates="car", cascade="all, delete-orphan")
+    vignettes = relationship("Vignette", back_populates="car", cascade="all, delete-orphan")
 
 
 class Insurance(Base):
@@ -112,6 +113,24 @@ class Refueling(Base):
     date = Column(Date)
     fuel_type = Column(Enum(FuelType))
     cost_eur = Column(Float)
+    quantity_liters = Column(Float, nullable=True)
     odometer = Column(Integer)
 
     car = relationship("Car", back_populates="refuelings")
+
+
+class Vignette(Base):
+    __tablename__ = "vignettes"
+
+    id = Column(Integer, primary_key=True, index=True)
+    car_id = Column(Integer, ForeignKey("cars.id"))
+    country_code = Column(String)
+    date_start = Column(Date)
+    date_end = Column(Date)
+    price = Column(Float, nullable=True)
+    currency = Column(String, default="EUR")
+    status = Column(String, nullable=True)
+    vehicle_type = Column(String, nullable=True)
+    vehicle_class = Column(String, nullable=True)
+
+    car = relationship("Car", back_populates="vignettes")

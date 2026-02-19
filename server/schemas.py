@@ -79,12 +79,34 @@ class RefuelingBase(BaseModel):
     date: date
     fuel_type: FuelType
     cost_eur: float
+    quantity_liters: Optional[float] = None
     odometer: int
 
 class RefuelingCreate(RefuelingBase):
     pass
 
 class Refueling(RefuelingBase):
+    id: int
+    car_id: int
+    model_config = ConfigDict(from_attributes=True)
+
+
+# ─── Vignette ────────────────────────────────────────────────────────────────
+
+class VignetteBase(BaseModel):
+    country_code: str
+    date_start: date
+    date_end: date
+    price: Optional[float] = None
+    currency: Optional[str] = "EUR"
+    status: Optional[str] = None
+    vehicle_type: Optional[str] = None
+    vehicle_class: Optional[str] = None
+
+class VignetteCreate(VignetteBase):
+    pass
+
+class Vignette(VignetteBase):
     id: int
     car_id: int
     model_config = ConfigDict(from_attributes=True)
@@ -109,6 +131,16 @@ class CarCreate(CarBase):
     pass
 
 class CarUpdate(BaseModel):
+    plate: Optional[str] = None
+    make: Optional[str] = None
+    model: Optional[str] = None
+    model_year: Optional[int] = None
+    current_odometer: Optional[int] = None
+    engine_model: Optional[str] = None
+    engine_volume: Optional[float] = None
+    transmission: Optional[TransmissionType] = None
+    drive_type: Optional[DriveType] = None
+    tire_size: Optional[str] = None
     is_favorite: Optional[bool] = None
 
 class Car(CarBase):
@@ -119,5 +151,6 @@ class Car(CarBase):
     inspections: List[Inspection] = []
     services: List[Service] = []
     refuelings: List[Refueling] = []
+    vignettes: List[Vignette] = []
 
     model_config = ConfigDict(from_attributes=True)

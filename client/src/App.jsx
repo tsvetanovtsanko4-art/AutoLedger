@@ -10,6 +10,8 @@ import CarDetails from './components/CarDetails';
 import LoginForm from './components/LoginForm';
 import RegisterForm from './components/RegisterForm';
 import PublicDashboard from './components/PublicDashboard';
+import AddVignette from './components/AddVignette';
+import CarEditForm from './components/CarEditForm';
 
 const ProtectedRoute = ({ children }) => {
   const { token, loading } = useAuth();
@@ -66,6 +68,8 @@ function App() {
               <Route path="/cars/:id/add-insurance" element={<ProtectedRoute><InsuranceForm /></ProtectedRoute>} />
               <Route path="/cars/:id/add-service" element={<ProtectedRoute><ServiceForm /></ProtectedRoute>} />
               <Route path="/cars/:id/add-refueling" element={<ProtectedRoute><RefuelingForm /></ProtectedRoute>} />
+              <Route path="/cars/:id/add-vignette" element={<ProtectedRoute><AddVignette /></ProtectedRoute>} />
+              <Route path="/cars/:id/edit" element={<ProtectedRoute><CarEditForm /></ProtectedRoute>} />
 
               {/* Catch-all */}
               <Route path="*" element={<Navigate to="/" />} />
