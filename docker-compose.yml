@@ -40,6 +40,8 @@ services:
       - ./client:/app
       # Prevent node_modules from being overwritten by the bind mount
       - /app/node_modules
+      # Persist mkcert certificates on the host
+      - ./client/certs:/root/.vite-plugin-mkcert
     environment:
       - VITE_API_TARGET=http://server:8000
     restart: unless-stopped

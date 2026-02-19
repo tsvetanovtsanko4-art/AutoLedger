@@ -1,0 +1,4 @@
+# Certificates - keep folder, ignore actual cert files
+client/certs/*.pem
+client/certs/*.crt
+client/certs/*.key
