@@ -2,14 +2,17 @@ from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
-from sqlalchemy.orm import Session
-from sqlalchemy import func
+from sqlalchemy import func, text
+from sqlalchemy.types import Float as SAFloat
 from typing import List, Optional
 import requests
+import time
 from . import models, schemas, auth
 from .database import engine
 
-import time
+# ─── Simple in-memory cache for public stats ─────────────────────────────────
+_stats_cache: dict = {"data": None, "ts": 0.0}
+_CACHE_TTL = 60  # seconds
 
 def wait_for_db(retries: int = 10, delay: int = 3) -> None:
     """Retry DB connection until available or give up."""
@@ -318,64 +321,109 @@ def proxy_bgtoll(plate: str, current_user: models.User = Depends(auth.get_curren
 
 @app.get("/api/public/stats")
 def public_stats(db: Session = Depends(auth.get_db)):
-    # Cars by make
-    make_counts = db.query(models.Car.make, func.count(models.Car.id)).group_by(models.Car.make).all()
+    global _stats_cache
 
-    # Total refueling cost per year
-    refuelings_all = db.query(models.Refueling).all()
-    cost_by_year = {}
-    for r in refuelings_all:
-        year = str(r.date.year)
-        cost_by_year[year] = round(cost_by_year.get(year, 0) + r.cost_eur, 2)
+    # ── Cache hit ────────────────────────────────────────────────────────────
+    if _stats_cache["data"] and (time.time() - _stats_cache["ts"]) < _CACHE_TTL:
+        return _stats_cache["data"]
 
-    # Avg L/100km by make+model (only cars with quantity_liters data)
-    cars = db.query(models.Car).all()
-    model_consumption: dict = {}  # key: (make, model) -> list of l_per_100km values
+    # ── 1. Cars by make (already a SQL aggregation) ──────────────────────────
+    make_counts = (
+        db.query(models.Car.make, func.count(models.Car.id))
+        .group_by(models.Car.make)
+        .all()
+    )
 
-    for car in cars:
-        refuels = sorted(car.refuelings, key=lambda r: r.odometer)
-        for i in range(1, len(refuels)):
-            prev, curr = refuels[i - 1], refuels[i]
-            km = curr.odometer - prev.odometer
-            if curr.quantity_liters and km > 0:
-                l_per_100 = (curr.quantity_liters / km) * 100
-                key = (car.make, car.model)
-                model_consumption.setdefault(key, []).append(l_per_100)
+    # ── 2. Total refueling cost per year (SQL GROUP BY) ──────────────────────
+    cost_by_year_rows = (
+        db.query(
+            func.extract("year", models.Refueling.date).label("year"),
+            func.sum(models.Refueling.cost_eur).label("total_eur"),
+        )
+        .group_by(func.extract("year", models.Refueling.date))
+        .order_by("year")
+        .all()
+    )
 
-    consumption_by_model = []
-    for (make, model), values in model_consumption.items():
-        if values:
-            consumption_by_model.append({
-                "make": make,
-                "model": model,
-                "avg_l_per_100km": round(sum(values) / len(values), 2),
-                "sample_count": len(values),
-            })
-    consumption_by_model.sort(key=lambda x: x["avg_l_per_100km"])
+    # ── 3. Avg L/100km by make+model using PostgreSQL LAG() window function ───
+    consumption_sql = text("""
+        WITH paired AS (
+            SELECT
+                car_id,
+                quantity_liters,
+                odometer,
+                LAG(odometer) OVER (PARTITION BY car_id ORDER BY odometer) AS prev_odometer
+            FROM refuelings
+            WHERE quantity_liters IS NOT NULL
+        )
+        SELECT
+            c.make,
+            c.model,
+            ROUND(
+                AVG(paired.quantity_liters * 100.0 / NULLIF(paired.odometer - paired.prev_odometer, 0))::numeric,
+                2
+            ) AS avg_l_per_100km,
+            COUNT(*) AS sample_count
+        FROM paired
+        JOIN cars c ON c.id = paired.car_id
+        WHERE paired.prev_odometer IS NOT NULL
+          AND paired.odometer > paired.prev_odometer
+        GROUP BY c.make, c.model
+        HAVING COUNT(*) >= 1
+        ORDER BY avg_l_per_100km ASC
+    """)
+    consumption_by_model = [
+        {
+            "make": row.make,
+            "model": row.model,
+            "avg_l_per_100km": float(row.avg_l_per_100km) if row.avg_l_per_100km is not None else None,
+            "sample_count": row.sample_count,
+        }
+        for row in db.execute(consumption_sql)
+    ]
 
-    # Avg cost per km per car (legacy table)
-    consumption_data = []
-    for car in cars:
-        if car.refuelings:
-            total_cost = sum(r.cost_eur for r in car.refuelings)
-            max_odo = max(r.odometer for r in car.refuelings)
-            min_odo = min(r.odometer for r in car.refuelings)
-            km_driven = max_odo - min_odo
-            if km_driven > 0:
-                consumption_data.append({
-                    "make": car.make,
-                    "model": car.model,
-                    "engine_volume": car.engine_volume,
-                    "model_year": car.model_year,
-                    "avg_cost_per_km": round(total_cost / km_driven, 4),
-                })
+    # ── 4. Avg cost per km per car (SQL GROUP BY) ─────────────────────────────
+    consumption_by_car_rows = (
+        db.query(
+            models.Car.make,
+            models.Car.model,
+            models.Car.engine_volume,
+            models.Car.model_year,
+            (
+                func.sum(models.Refueling.cost_eur) /
+                (func.max(models.Refueling.odometer) - func.min(models.Refueling.odometer))
+            ).label("avg_cost_per_km"),
+        )
+        .join(models.Refueling, models.Refueling.car_id == models.Car.id)
+        .group_by(models.Car.id)
+        .having(
+            (func.max(models.Refueling.odometer) - func.min(models.Refueling.odometer)) > 0
+        )
+        .all()
+    )
 
-    return {
+    result = {
         "cars_by_make": [{"make": m, "count": c} for m, c in make_counts],
-        "cost_by_year": [{"year": y, "total_eur": v} for y, v in sorted(cost_by_year.items())],
-        "consumption_by_car": consumption_data,
+        "cost_by_year": [{"year": int(row.year), "total_eur": round(float(row.total_eur), 2) if row.total_eur else 0.0} for row in cost_by_year_rows],
         "consumption_by_model": consumption_by_model,
+        "consumption_by_car": [
+            {
+                "make": row.make,
+                "model": row.model,
+                "engine_volume": row.engine_volume,
+                "model_year": row.model_year,
+                "avg_cost_per_km": round(float(row.avg_cost_per_km), 4) if row.avg_cost_per_km is not None else None,
+            }
+            for row in consumption_by_car_rows
+        ],
     }
+
+
+    # ── Store in cache ────────────────────────────────────────────────────────
+    _stats_cache["data"] = result
+    _stats_cache["ts"] = time.time()
+
+    return result
 
 @app.get("/api/cars/{car_id}/avg-consumption")
 def get_car_avg_consumption(

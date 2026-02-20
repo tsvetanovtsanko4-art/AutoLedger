@@ -3,6 +3,46 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import api from '../api';
 import { Link } from 'react-router-dom';
 
+// Animated skeleton placeholder
+const Skeleton = ({ className = '' }) => (
+    <div className={`animate-pulse bg-gray-200 rounded-xl ${className}`} />
+);
+
+const LoadingSkeleton = () => (
+    <div className="space-y-12">
+        {/* Hero skeleton */}
+        <div className="py-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-3xl px-4 flex flex-col items-center gap-4">
+            <Skeleton className="h-10 w-2/3 bg-blue-400" />
+            <Skeleton className="h-5 w-1/2 bg-blue-400" />
+            <div className="flex gap-4 mt-2">
+                <Skeleton className="h-12 w-36 bg-blue-400" />
+                <Skeleton className="h-12 w-28 bg-blue-400" />
+            </div>
+        </div>
+        {/* Two chart skeletons */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 space-y-4">
+                <Skeleton className="h-6 w-48" />
+                <Skeleton className="h-[360px] w-full" />
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 space-y-4">
+                <Skeleton className="h-6 w-48" />
+                <Skeleton className="h-[360px] w-full" />
+            </div>
+        </div>
+        {/* Bar chart skeleton */}
+        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 space-y-4">
+            <Skeleton className="h-6 w-64" />
+            <Skeleton className="h-[380px] w-full" />
+        </div>
+        {/* Table skeleton */}
+        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 space-y-3">
+            <Skeleton className="h-6 w-48" />
+            {[...Array(6)].map((_, i) => <Skeleton key={i} className="h-10 w-full" />)}
+        </div>
+    </div>
+);
+
 const PublicDashboard = () => {
     const [stats, setStats] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -14,7 +54,7 @@ const PublicDashboard = () => {
             .finally(() => setLoading(false));
     }, []);
 
-    if (loading) return <div className="text-center p-20 text-gray-500">Loading aggregate stats...</div>;
+    if (loading) return <LoadingSkeleton />;
     if (!stats) return <div className="text-center p-20 text-gray-500">Stats unavailable.</div>;
 
     const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884d8', '#82ca9d'];
