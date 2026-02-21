@@ -2,20 +2,48 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
+// Same email regex used in RegisterForm
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 const LoginForm = () => {
     const { login } = useAuth();
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
+    const [fieldErrors, setFieldErrors] = useState({});
     const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError(null);
+
+        // --- Field-level validation ---
+        const errors = {};
+
+        if (!email.trim()) {
+            errors.email = 'Email is required.';
+        } else if (/\s/.test(email)) {
+            errors.email = 'Email must not contain spaces.';
+        } else if (!EMAIL_REGEX.test(email.trim())) {
+            errors.email = 'Please enter a valid email address (e.g. you@example.com).';
+        }
+
+        if (!password) {
+            errors.password = 'Password is required.';
+        } else if (/\s/.test(password)) {
+            errors.password = 'Password must not contain spaces.';
+        }
+
+        if (Object.keys(errors).length > 0) {
+            setFieldErrors(errors);
+            return;
+        }
+
+        setFieldErrors({});
         setLoading(true);
         try {
-            await login(email, password);
+            await login(email.trim(), password);
             navigate('/home');
         } catch (err) {
             setError(err.response?.data?.detail || 'Login failed. Check your credentials.');
@@ -43,26 +71,27 @@ const LoginForm = () => {
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
                         <input
-                            type="email"
+                            type="text"
                             value={email}
-                            onChange={e => setEmail(e.target.value)}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-                            required
+                            onChange={e => { const v = e.target.value.replace(/\s/g, ''); setEmail(v); setFieldErrors(prev => ({ ...prev, email: undefined })); }}
+                            className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition ${fieldErrors.email ? 'border-red-400 bg-red-50' : 'border-gray-300'}`}
                             data-testid="input-email"
                             placeholder="you@example.com"
                         />
+                        {fieldErrors.email && <p className="text-red-600 text-xs mt-1" data-testid="error-email">{fieldErrors.email}</p>}
                     </div>
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
                         <input
                             type="password"
                             value={password}
-                            onChange={e => setPassword(e.target.value)}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-                            required
+                            onKeyDown={e => { if (e.key === ' ') e.preventDefault(); }}
+                            onChange={e => { setPassword(e.target.value); setFieldErrors(prev => ({ ...prev, password: undefined })); }}
+                            className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition ${fieldErrors.password ? 'border-red-400 bg-red-50' : 'border-gray-300'}`}
                             data-testid="input-password"
                             placeholder="••••••••"
                         />
+                        {fieldErrors.password && <p className="text-red-600 text-xs mt-1" data-testid="error-password">{fieldErrors.password}</p>}
                     </div>
                     <button
                         type="submit"

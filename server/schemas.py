@@ -1,7 +1,10 @@
 from typing import List, Optional
-from pydantic import BaseModel, ConfigDict
+import re
+from pydantic import BaseModel, ConfigDict, field_validator
 from datetime import date
 from .models import FuelType, InsuranceType, TransmissionType, DriveType
+
+_EMAIL_REGEX = re.compile(r'^[^\s@]+@[^\s@]+\.[^\s@]+$')
 
 
 # ─── Auth ────────────────────────────────────────────────────────────────────
@@ -10,9 +13,51 @@ class UserCreate(BaseModel):
     email: str
     password: str
 
+    @field_validator('email')
+    @classmethod
+    def validate_email(cls, v: str) -> str:
+        if not v or not v.strip():
+            raise ValueError('Email is required.')
+        if re.search(r'\s', v):
+            raise ValueError('Email must not contain spaces.')
+        if not _EMAIL_REGEX.match(v):
+            raise ValueError('Please enter a valid email address (e.g. you@example.com).')
+        return v.strip()
+
+    @field_validator('password')
+    @classmethod
+    def validate_password(cls, v: str) -> str:
+        if not v:
+            raise ValueError('Password is required.')
+        if re.search(r'\s', v):
+            raise ValueError('Password must not contain spaces.')
+        return v
+
+
 class UserLogin(BaseModel):
     email: str
     password: str
+
+    @field_validator('email')
+    @classmethod
+    def validate_email(cls, v: str) -> str:
+        if not v or not v.strip():
+            raise ValueError('Email is required.')
+        if re.search(r'\s', v):
+            raise ValueError('Email must not contain spaces.')
+        if not _EMAIL_REGEX.match(v):
+            raise ValueError('Please enter a valid email address (e.g. you@example.com).')
+        return v.strip()
+
+    @field_validator('password')
+    @classmethod
+    def validate_password(cls, v: str) -> str:
+        if not v:
+            raise ValueError('Password is required.')
+        if re.search(r'\s', v):
+            raise ValueError('Password must not contain spaces.')
+        return v
+
 
 class Token(BaseModel):
     access_token: str
