@@ -1,0 +1,25 @@
+services:
+  jmeter-master:
+    image: justb4/jmeter:5.5
+    container_name: jmeter-master
+    volumes:
+      - ./:/jmeter_tests
+    command: >
+      -n -t /jmeter_tests/car_tracker_load_test.jmx  -R jmeter-worker1,jmeter-worker2 -l /jmeter_tests/results_distributed.csv  -e -o /jmeter_tests/report_distributed  -Jhost=host.docker.internal  -Jport=8000  -Jthreads=5  -Jrampup=5  -Jduration=60
+    depends_on:
+      - jmeter-worker1
+      - jmeter-worker2
+
+  jmeter-worker1:
+    image: justb4/jmeter:5.5
+    container_name: jmeter-worker1
+    entrypoint: jmeter-server -Dserver.rmi.ssl.disable=true -Dserver.rmi.localport=1099
+    ports:
+      - "1099:1099"
+
+  jmeter-worker2:
+    image: justb4/jmeter:5.5
+    container_name: jmeter-worker2
+    entrypoint: jmeter-server -Dserver.rmi.ssl.disable=true -Dserver.rmi.localport=1099
+    ports:
+      - "1100:1099"

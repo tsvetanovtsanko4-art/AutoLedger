@@ -1,0 +1,1073 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1771865769278,254,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,1,3,http://localhost:8000/api/auth/register,249,0,37
+1771865769536,81,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,1,3,http://localhost:8000/api/auth/login,81,0,0
+1771865769621,37,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,2,4,http://localhost:8000/api/auth/register,37,0,0
+1771865769658,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,2,4,http://localhost:8000/api/auth/login,59,0,0
+1771865770120,32,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,3,6,http://localhost:8000/api/auth/register,32,0,1
+1771865770153,61,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,3,6,http://localhost:8000/api/auth/login,61,0,0
+1771865770618,44,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,4,8,http://localhost:8000/api/auth/register,44,0,2
+1771865770663,62,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,4,8,http://localhost:8000/api/auth/login,62,0,0
+1771865770839,168,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,4,8,http://localhost:8000/api/public/stats,164,0,1
+1771865771118,42,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,5,10,http://localhost:8000/api/auth/register,42,0,1
+1771865771162,72,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,5,10,http://localhost:8000/api/auth/login,72,0,0
+1771865771555,52,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,6,11,http://localhost:8000/api/public/stats,50,0,2
+1771865771617,25,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,6,12,http://localhost:8000/api/auth/register,25,0,1
+1771865771649,20,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,6,12,http://localhost:8000/api/me/cars,19,0,0
+1771865771643,70,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,6,12,http://localhost:8000/api/auth/login,70,0,0
+1771865771718,9,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,6,12,http://localhost:8000/api/me/cars,9,0,0
+1771865771669,64,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,6,12,http://localhost:8000/api/auth/register,64,0,0
+1771865771728,65,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,6,12,http://localhost:8000/api/auth/register,65,0,0
+1771865771734,67,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,6,12,http://localhost:8000/api/auth/login,67,0,0
+1771865771794,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,6,12,http://localhost:8000/api/auth/login,59,0,0
+1771865771988,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,7,13,http://localhost:8000/api/public/stats,46,0,1
+1771865772116,26,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,7,14,http://localhost:8000/api/auth/register,26,0,1
+1771865772142,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,7,14,http://localhost:8000/api/auth/login,63,0,0
+1771865772216,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,7,14,http://localhost:8000/api/me/cars,7,0,0
+1771865772224,69,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,7,14,http://localhost:8000/api/auth/register,69,0,0
+1771865772294,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,7,14,http://localhost:8000/api/auth/login,59,0,0
+1771865772616,34,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,8,16,http://localhost:8000/api/auth/register,34,0,1
+1771865772652,61,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,8,16,http://localhost:8000/api/auth/login,61,0,0
+1771865772727,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,8,16,http://localhost:8000/api/me/cars,8,0,0
+1771865772736,65,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,8,16,http://localhost:8000/api/auth/register,65,0,0
+1771865772802,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,8,16,http://localhost:8000/api/auth/login,63,0,0
+1771865773115,29,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,9,18,http://localhost:8000/api/auth/register,29,0,1
+1771865773160,60,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,9,18,http://localhost:8000/api/public/stats,56,0,1
+1771865773235,10,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,9,18,http://localhost:8000/api/me/cars,10,0,0
+1771865773145,116,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,9,18,http://localhost:8000/api/auth/login,116,0,0
+1771865773246,79,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,9,18,http://localhost:8000/api/auth/register,79,0,0
+1771865773326,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,9,18,http://localhost:8000/api/auth/login,63,0,0
+1771865773389,55,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,9,18,http://localhost:8000/api/public/stats,51,0,0
+1771865773498,55,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,19,http://localhost:8000/api/public/stats,52,0,1
+1771865773614,30,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,30,0,1
+1771865773648,64,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,62,0,1
+1771865773644,122,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,122,0,0
+1771865773696,78,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,74,0,0
+1771865773715,68,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,68,0,0
+1771865773803,11,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,11,0,0
+1771865773784,69,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,69,0,0
+1771865773810,56,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,52,0,0
+1771865773855,24,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,24,0,0
+1771865773815,126,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,126,0,0
+1771865773854,91,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,91,0,0
+1771865773880,69,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,69,0,0
+1771865773942,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865773949,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865774183,58,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,55,0,2
+1771865774207,37,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,37,0,0
+1771865774245,64,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,64,0,0
+1771865774310,67,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,67,0,0
+1771865774354,53,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,50,0,0
+1771865774356,54,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,54,0,0
+1771865774411,66,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,66,0,0
+1771865774477,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865774637,52,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,49,0,1
+1771865774714,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865774722,68,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,68,0,0
+1771865774791,74,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,74,0,0
+1771865774867,9,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,9,0,0
+1771865774876,69,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,69,0,0
+1771865774945,65,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,65,0,0
+1771865775215,71,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,68,0,2
+1771865775236,96,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,93,0,0
+1771865775263,71,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,71,0,0
+1771865775390,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865775334,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865775401,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865775398,68,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865775468,73,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,73,0,0
+1771865775529,54,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,52,0,0
+1771865775561,71,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,68,0,0
+1771865775675,48,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865775768,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865775775,66,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,66,0,0
+1771865775841,61,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,61,0,0
+1771865775946,16,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,16,0,0
+1771865776003,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865776014,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865775963,70,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,70,0,0
+1771865776009,64,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,64,0,0
+1771865776022,63,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,63,0,0
+1771865776033,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865776073,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865776085,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865776111,48,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,1
+1771865776241,58,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,55,0,0
+1771865776288,52,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,51,0,0
+1771865776380,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865776392,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865776387,94,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,94,0,0
+1771865776481,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865776538,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865776546,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865776614,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865776867,21,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,21,0,0
+1771865776889,75,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,75,0,0
+1771865777012,14,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,14,0,0
+1771865776965,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865777026,83,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,83,0,0
+1771865777109,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865777197,70,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,68,0,0
+1771865777208,107,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,102,0,0
+1771865777298,58,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,56,0,0
+1771865777463,10,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,10,0,0
+1771865777542,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865777474,82,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,82,0,0
+1771865777548,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865777557,96,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,96,0,0
+1771865777549,112,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,112,0,0
+1771865777661,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865777853,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865777887,58,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,56,0,0
+1771865777925,66,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,64,0,0
+1771865777904,131,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,131,0,0
+1771865777975,61,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,59,0,0
+1771865778036,64,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,64,0,0
+1771865778071,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865778098,25,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,25,0,0
+1771865778135,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865778150,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865778101,75,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,75,0,0
+1771865778123,66,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,66,0,0
+1771865778141,64,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,64,0,0
+1771865778157,64,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,64,0,0
+1771865778189,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865778205,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865778221,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865778541,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865778550,71,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,71,0,0
+1771865778620,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865778645,350,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,348,0,0
+1771865778621,420,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,419,0,0
+1771865778979,65,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,63,0,0
+1771865779015,78,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,76,0,0
+1771865778674,420,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,420,0,0
+1771865779031,64,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,64,0,0
+1771865779094,68,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,68,0,0
+1771865779095,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865779171,23,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,23,0,0
+1771865779164,89,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,88,0,0
+1771865779164,89,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,88,0,0
+1771865779195,65,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,65,0,0
+1771865779261,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865779654,13,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,13,0,0
+1771865779683,52,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,51,0,0
+1771865779723,17,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,17,0,0
+1771865779668,108,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,108,0,0
+1771865779740,69,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,69,0,0
+1771865779777,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865779809,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865780052,54,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,50,0,0
+1771865780068,84,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,82,0,0
+1771865780178,14,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,14,0,0
+1771865780250,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865780193,71,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,71,0,0
+1771865780269,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865780281,9,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,9,0,0
+1771865780257,63,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,63,0,0
+1771865780265,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865780278,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865780290,62,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,62,0,0
+1771865780321,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865780345,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865780353,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865780500,56,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,54,0,0
+1771865780676,55,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,51,0,0
+1771865780799,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865781043,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865781061,54,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,50,0,0
+1771865781050,103,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,103,0,0
+1771865781153,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865781254,12,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,12,0,0
+1771865781254,13,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,13,0,0
+1771865781322,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865781268,72,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,72,0,0
+1771865781267,73,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,73,0,0
+1771865781328,64,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,64,0,0
+1771865781341,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865781341,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865781369,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865781414,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865781392,113,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,113,0,0
+1771865781658,54,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,53,0,0
+1771865781785,48,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,0
+1771865781835,48,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865781837,53,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,53,0,0
+1771865781870,22,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,22,0,0
+1771865781909,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,0
+1771865781892,104,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,104,0,0
+1771865781891,109,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,109,0,0
+1771865781996,61,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,61,0,0
+1771865782000,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865782159,58,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,56,0,0
+1771865782330,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865782385,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865782337,75,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,75,0,0
+1771865782408,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865782405,54,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,54,0,0
+1771865782414,55,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,55,0,0
+1771865782393,111,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,111,0,0
+1771865782413,115,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,115,0,0
+1771865782469,63,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,63,0,0
+1771865782459,73,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,73,0,0
+1771865782504,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865782533,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865782533,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865782725,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865782925,50,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865782992,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865783214,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865783221,79,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,79,0,0
+1771865783301,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865783405,9,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,9,0,0
+1771865783405,10,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,10,0,0
+1771865783414,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,66,0,0
+1771865783415,69,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,69,0,0
+1771865783505,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865783481,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865783484,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865783514,66,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,66,0,0
+1771865783581,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865783636,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865783673,56,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,54,0,0
+1771865783728,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865783763,53,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,51,0,0
+1771865783809,51,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,49,0,0
+1771865784058,13,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,13,0,0
+1771865784061,12,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,12,0,0
+1771865784072,76,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,76,0,0
+1771865784074,78,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,78,0,0
+1771865784149,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865784152,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865784318,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,48,0,0
+1771865784530,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865784567,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865784537,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865784582,53,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,50,0,0
+1771865784594,51,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,51,0,0
+1771865784597,49,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,49,0,0
+1771865784574,106,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,106,0,0
+1771865784604,96,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,96,0,0
+1771865784645,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865784647,65,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,65,0,0
+1771865784680,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865784722,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,0
+1771865784713,99,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,99,0,0
+1771865784713,99,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,99,0,0
+1771865784927,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,0
+1771865784983,48,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,0
+1771865785037,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,0
+1771865785130,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,0
+1771865785343,51,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,48,0,0
+1771865785361,37,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,37,0,0
+1771865785399,65,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,65,0,0
+1771865785465,65,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865785542,12,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,12,0,0
+1771865785546,13,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,13,0,0
+1771865785560,68,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,68,0,0
+1771865785555,73,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,73,0,0
+1771865785647,13,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,13,0,0
+1771865785629,67,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,67,0,0
+1771865785629,67,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,67,0,0
+1771865785660,64,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,64,0,0
+1771865785725,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865785780,52,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,49,0,0
+1771865786209,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865786213,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865786217,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865786222,70,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,70,0,0
+1771865786284,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865786293,67,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,67,0,0
+1771865786375,51,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,49,0,0
+1771865786416,66,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,64,0,0
+1771865786415,116,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,114,0,0
+1771865786551,50,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,0
+1771865786701,12,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,12,0,0
+1771865786729,48,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,0
+1771865786741,41,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,41,0,0
+1771865786713,107,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,107,0,0
+1771865786813,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865786813,9,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,9,0,0
+1771865786782,66,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,66,0,0
+1771865786823,65,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,65,0,0
+1771865786820,68,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,68,0,0
+1771865786821,71,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,71,0,0
+1771865786847,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865786903,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,48,0,0
+1771865786848,150,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,150,0,0
+1771865786888,110,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,110,0,0
+1771865786892,106,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,106,0,0
+1771865787447,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865787532,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865787539,65,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,65,0,0
+1771865787588,52,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,50,0,0
+1771865787591,95,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,93,0,0
+1771865787659,80,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,75,0,0
+1771865787697,48,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,48,0,0
+1771865787697,49,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,49,0,0
+1771865787604,176,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,176,0,0
+1771865787760,50,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,48,0,0
+1771865787785,32,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,32,0,0
+1771865787745,107,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,107,0,0
+1771865787747,109,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,109,0,0
+1771865787817,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865787852,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865787856,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865787884,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865788164,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865788350,17,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,17,0,0
+1771865788362,9,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,9,0,0
+1771865788371,65,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,65,0,0
+1771865788368,68,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,68,0,0
+1771865788408,48,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865788436,80,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,80,0,0
+1771865788436,80,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,80,0,0
+1771865788547,70,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,68,0,0
+1771865788871,51,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,48,0,0
+1771865788889,38,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,38,0,0
+1771865788927,69,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,69,0,0
+1771865789001,10,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,10,0,0
+1771865789001,13,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,13,0,0
+1771865789001,16,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,15,0,0
+1771865788996,68,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,68,0,0
+1771865789011,73,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,73,0,0
+1771865789017,71,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,71,0,0
+1771865789014,74,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,74,0,0
+1771865789084,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865789088,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865789088,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865789447,45,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,43,0,0
+1771865789681,50,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,49,0,0
+1771865789730,48,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,0
+1771865789780,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865789786,65,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,65,0,0
+1771865789839,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865789885,48,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,0
+1771865789916,23,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,23,0,0
+1771865789913,28,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,28,0,0
+1771865789945,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865789852,124,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,124,0,0
+1771865789941,66,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,66,0,0
+1771865789939,68,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,68,0,0
+1771865789951,68,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,68,0,0
+1771865790008,68,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,68,0,0
+1771865790010,66,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,66,0,0
+1771865790020,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865790154,79,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,76,0,0
+1771865790192,83,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,81,0,0
+1771865790492,61,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,59,0,0
+1771865790542,60,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,58,0,0
+1771865790517,86,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,86,0,0
+1771865790517,88,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,88,0,0
+1771865790603,73,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,73,0,0
+1771865790605,74,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,74,0,0
+1771865790676,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865790680,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865790965,48,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,0
+1771865791065,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865791071,72,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,72,0,0
+1771865791144,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865791152,10,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,10,0,0
+1771865791152,14,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,14,0,0
+1771865791152,52,POST /api/auth/register,400,Bad Request,TG - Authenticated Users 2-2,text,true,,171,326,10,20,http://localhost:8000/api/auth/register,52,0,0
+1771865791144,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865791166,65,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,65,0,0
+1771865791163,72,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,72,0,0
+1771865791205,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865791232,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865791236,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865791285,48,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865791322,57,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,54,0,0
+1771865791330,92,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,90,0,0
+1771865791383,87,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,85,0,0
+1771865791386,127,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,125,0,0
+1771865791459,99,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,97,0,0
+1771865791978,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865791986,74,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,74,0,0
+1771865792077,11,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,10,0,0
+1771865792077,11,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,11,0,0
+1771865792080,14,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,14,0,0
+1771865792060,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865792088,68,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,68,0,0
+1771865792088,71,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,71,0,0
+1771865792095,68,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,68,0,0
+1771865792156,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865792160,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865792164,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865792464,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,43,0,0
+1771865792490,64,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,62,0,0
+1771865792521,77,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,75,0,0
+1771865792737,17,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,17,0,0
+1771865792740,21,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,21,0,0
+1771865792758,52,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,50,0,0
+1771865792755,96,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,96,0,0
+1771865792762,113,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,113,0,0
+1771865792837,48,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,0
+1771865792879,55,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,53,0,0
+1771865792852,140,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,140,0,0
+1771865792875,117,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,117,0,0
+1771865793023,55,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,53,0,0
+1771865793210,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865793264,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865793217,74,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,74,0,0
+1771865793296,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865793301,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865793271,64,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,64,0,0
+1771865793292,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865793303,69,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,69,0,0
+1771865793308,64,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,64,0,0
+1771865793336,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865793372,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865793372,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865793434,48,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,0
+1771865793667,53,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,51,0,0
+1771865793702,66,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,64,0,0
+1771865793841,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865793968,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865794123,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865794131,73,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,73,0,0
+1771865794218,13,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,13,0,0
+1771865794220,17,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,17,0,0
+1771865794224,16,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,16,0,0
+1771865794204,71,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,71,0,0
+1771865794232,71,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,71,0,0
+1771865794240,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865794237,70,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,70,0,0
+1771865794264,51,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,0
+1771865794292,73,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,72,0,0
+1771865794303,120,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,120,0,0
+1771865794307,116,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,116,0,0
+1771865794307,116,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,116,0,0
+1771865794923,51,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,49,0,0
+1771865794994,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865794994,9,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,9,0,0
+1771865795002,71,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,71,0,0
+1771865795004,69,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,69,0,0
+1771865795079,69,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,66,0,0
+1771865795089,113,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,111,0,0
+1771865795074,169,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,169,0,0
+1771865795074,169,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,169,0,0
+1771865795335,62,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,61,0,0
+1771865795393,54,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,52,0,0
+1771865795353,103,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,103,0,0
+1771865795432,26,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,26,0,0
+1771865795396,62,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,62,0,0
+1771865795436,23,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,23,0,0
+1771865795459,72,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,72,0,0
+1771865795459,72,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,72,0,0
+1771865795458,81,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,81,0,0
+1771865795456,91,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,91,0,0
+1771865795520,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865795532,85,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,83,0,0
+1771865795623,59,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,57,0,0
+1771865795531,193,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,193,0,0
+1771865795547,177,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,177,0,0
+1771865795531,196,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,196,0,0
+1771865795539,188,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,188,0,0
+1771865796011,64,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,62,0,0
+1771865796276,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865796288,55,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,53,0,0
+1771865796289,98,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,97,0,0
+1771865796284,152,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,152,0,0
+1771865796427,31,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,31,0,0
+1771865796424,37,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,37,0,0
+1771865796424,40,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,40,0,0
+1771865796437,78,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,78,0,0
+1771865796461,70,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,70,0,0
+1771865796459,72,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,72,0,0
+1771865796464,71,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,71,0,0
+1771865796531,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865796531,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865796535,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865796676,50,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,48,0,0
+1771865797059,72,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,69,0,0
+1771865797244,21,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,21,0,0
+1771865797244,22,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,22,0,0
+1771865797257,57,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,55,0,0
+1771865797266,125,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,125,0,0
+1771865797266,129,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,129,0,0
+1771865797392,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865797395,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865797694,65,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,63,0,0
+1771865797724,44,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,44,0,0
+1771865797728,44,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,44,0,0
+1771865797728,44,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,44,0,0
+1771865797724,54,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,54,0,0
+1771865797766,59,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,55,0,0
+1771865797773,118,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,118,0,0
+1771865797778,121,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,121,0,0
+1771865797773,126,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,126,0,0
+1771865797768,131,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,131,0,0
+1771865797891,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865797899,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865797899,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865797899,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865798019,58,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,56,0,0
+1771865798060,62,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,60,0,0
+1771865798163,67,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,65,0,0
+1771865798517,9,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,9,0,0
+1771865798526,73,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,73,0,0
+1771865798600,12,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,12,0,0
+1771865798597,16,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,16,0,0
+1771865798597,16,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,16,0,0
+1771865798599,68,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,68,0,0
+1771865798613,74,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,74,0,0
+1771865798613,78,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,78,0,0
+1771865798614,77,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,77,0,0
+1771865798692,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865798687,100,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,100,0,0
+1771865798691,112,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,112,0,0
+1771865798691,112,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,112,0,0
+1771865798830,52,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,50,0,0
+1771865798910,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865799037,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865799144,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865799170,64,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,62,0,0
+1771865799386,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865799420,65,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,63,0,0
+1771865799460,30,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,30,0,0
+1771865799456,36,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,36,0,0
+1771865799490,69,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,69,0,0
+1771865799492,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865799559,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865799559,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865799655,67,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,64,0,0
+1771865799953,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865799964,11,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,11,0,0
+1771865799964,11,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,11,0,0
+1771865799964,14,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,14,0,0
+1771865799959,68,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,68,0,0
+1771865799975,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865799975,76,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,76,0,0
+1771865799978,73,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,73,0,0
+1771865800027,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865800043,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865800051,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865800051,68,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,68,0,0
+1771865800205,48,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,0
+1771865800459,45,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,43,0,0
+1771865800669,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865800675,72,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,72,0,0
+1771865800728,51,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,50,0,0
+1771865800772,53,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,51,0,0
+1771865800788,45,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,45,0,0
+1771865800805,29,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,29,0,0
+1771865800805,33,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,33,0,0
+1771865800747,140,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,140,0,0
+1771865800834,69,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,69,0,0
+1771865800833,77,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,77,0,0
+1771865800839,76,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,76,0,0
+1771865800903,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865800911,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865800915,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865801220,54,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,48,0,0
+1771865801259,59,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,56,0,0
+1771865801606,50,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865801624,37,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,37,0,0
+1771865801620,43,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,43,0,0
+1771865801663,64,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,64,0,0
+1771865801661,69,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,69,0,0
+1771865801727,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865801731,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865801918,53,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,51,0,0
+1771865801921,93,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,91,0,0
+1771865802028,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865802089,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865802104,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865802116,11,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,11,0,0
+1771865802119,10,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,10,0,0
+1771865802095,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865802110,68,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,68,0,0
+1771865802127,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865802130,72,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,72,0,0
+1771865802163,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865802179,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865802195,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865802203,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865802371,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865802829,61,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,58,0,0
+1771865802888,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865802895,64,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,64,0,0
+1771865802964,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865802973,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865802976,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865802959,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865802970,64,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,64,0,0
+1771865802982,64,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,64,0,0
+1771865802985,65,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,65,0,0
+1771865803021,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865803050,80,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,80,0,0
+1771865803035,95,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,95,0,0
+1771865803046,88,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,88,0,0
+1771865803110,50,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865803321,51,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,48,0,0
+1771865803343,72,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,70,0,0
+1771865803610,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865803793,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865803796,9,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,9,0,0
+1771865803801,69,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,69,0,0
+1771865803805,73,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,73,0,0
+1771865803870,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865803878,61,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,61,0,0
+1771865803893,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865803998,52,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,50,0,0
+1771865804225,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865804240,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865804257,5,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,5,0,0
+1771865804265,10,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,10,0,0
+1771865804233,78,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,78,0,0
+1771865804247,68,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,68,0,0
+1771865804263,64,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,64,0,0
+1771865804275,68,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,68,0,0
+1771865804312,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865804316,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865804328,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865804343,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865804503,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865805021,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865805029,66,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,66,0,0
+1771865805076,45,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865805078,92,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,88,0,0
+1771865805147,72,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,70,0,0
+1771865805095,164,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,164,0,0
+1771865805126,135,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,133,0,0
+1771865805133,134,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,134,0,0
+1771865805133,134,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,134,0,0
+1771865805136,133,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,133,0,0
+1771865805267,69,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,69,0,0
+1771865805267,72,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,72,0,0
+1771865805269,70,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,70,0,0
+1771865805340,71,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,71,0,0
+1771865805340,71,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,71,0,0
+1771865805336,75,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,75,0,0
+1771865805936,16,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,16,0,0
+1771865805941,17,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,16,0,0
+1771865805953,87,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,87,0,0
+1771865805958,82,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,82,0,0
+1771865806040,69,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,69,0,0
+1771865806040,69,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,69,0,0
+1771865806150,69,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,67,0,0
+1771865806162,99,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,97,0,0
+1771865806372,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865806376,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865806392,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865806404,9,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,9,0,0
+1771865806384,71,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,71,0,0
+1771865806378,77,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,77,0,0
+1771865806415,53,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,51,0,0
+1771865806399,112,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,112,0,0
+1771865806413,98,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,98,0,0
+1771865806455,80,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,80,0,0
+1771865806455,80,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,80,0,0
+1771865806511,61,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,61,0,0
+1771865806511,61,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,61,0,0
+1771865806653,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865806757,54,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,52,0,0
+1771865806886,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865807125,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865807261,11,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,11,0,0
+1771865807273,74,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,74,0,0
+1771865807348,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865807412,9,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,9,0,0
+1771865807412,10,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,10,0,0
+1771865807412,11,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,11,0,0
+1771865807422,69,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,69,0,0
+1771865807423,72,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,72,0,0
+1771865807422,73,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,73,0,0
+1771865807491,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865807495,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865807495,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865807653,72,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,70,0,0
+1771865807670,98,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,96,0,0
+1771865807969,65,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,63,0,0
+1771865808028,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865808102,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865808110,42,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,42,0,0
+1771865808110,43,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,43,0,0
+1771865808152,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865808154,65,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,65,0,0
+1771865808220,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865808220,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865808313,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865808426,56,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,54,0,0
+1771865808471,54,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,52,0,0
+1771865808536,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865808536,9,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,9,0,0
+1771865808573,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865808573,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865808544,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865808545,70,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,70,0,0
+1771865808580,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865808582,65,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,65,0,0
+1771865808615,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865808612,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865808647,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865808647,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865809211,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865809237,65,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,62,0,0
+1771865809411,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865809419,71,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,71,0,0
+1771865809490,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865809551,15,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,15,0,0
+1771865809555,58,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,58,0,0
+1771865809559,54,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,53,0,0
+1771865809555,60,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,60,0,0
+1771865809614,56,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,54,0,0
+1771865809566,149,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,149,0,0
+1771865809615,100,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,100,0,0
+1771865809614,101,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,101,0,0
+1771865809715,84,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,84,0,0
+1771865809715,84,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,84,0,0
+1771865809715,84,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,84,0,0
+1771865809807,50,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,48,0,0
+1771865809884,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865809952,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865810252,51,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,49,0,0
+1771865810283,25,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,25,0,0
+1771865810283,25,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,25,0,0
+1771865810308,51,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,49,0,0
+1771865810309,97,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,97,0,0
+1771865810308,114,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,114,0,0
+1771865810406,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865810422,61,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,61,0,0
+1771865810676,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865810676,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865810708,9,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,9,0,0
+1771865810711,10,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,10,0,0
+1771865810684,66,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,66,0,0
+1771865810683,75,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,75,0,0
+1771865810717,65,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,65,0,0
+1771865810722,64,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,64,0,0
+1771865810750,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865810758,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865810782,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865810786,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865810836,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865810920,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865811335,63,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,61,0,0
+1771865811483,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865811551,13,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,13,0,0
+1771865811564,78,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,78,0,0
+1771865811642,61,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,61,0,0
+1771865811800,11,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,11,0,0
+1771865811800,11,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,11,0,0
+1771865811800,13,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,13,0,0
+1771865811811,51,POST /api/auth/register,400,Bad Request,TG - Authenticated Users 2-3,text,true,,171,326,10,20,http://localhost:8000/api/auth/register,51,0,0
+1771865811811,79,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,79,0,0
+1771865811813,77,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,77,0,0
+1771865811867,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865811862,96,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,96,0,0
+1771865811890,87,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,87,0,0
+1771865811890,87,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,87,0,0
+1771865812010,45,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,43,0,0
+1771865812022,76,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,74,0,0
+1771865812361,55,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,52,0,0
+1771865812466,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865812484,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865812473,73,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,72,0,0
+1771865812491,62,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,62,0,0
+1771865812533,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865812553,85,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,85,0,0
+1771865812546,92,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,92,0,0
+1771865812663,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865812801,71,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,70,0,0
+1771865812811,75,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,75,0,0
+1771865812846,40,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,40,0,0
+1771865812846,40,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,40,0,0
+1771865812820,67,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,67,0,0
+1771865812887,78,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,78,0,0
+1771865812886,83,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,83,0,0
+1771865812886,87,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,87,0,0
+1771865812888,89,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,89,0,0
+1771865812965,69,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,69,0,0
+1771865812973,61,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,61,0,0
+1771865812970,68,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,68,0,0
+1771865812978,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865813678,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865813704,24,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,24,0,0
+1771865813729,74,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,74,0,0
+1771865813798,67,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,65,0,0
+1771865813803,122,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,122,0,0
+1771865813959,50,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,48,0,0
+1771865813959,57,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,57,0,0
+1771865813980,37,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,37,0,0
+1771865813980,38,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,38,0,0
+1771865814016,73,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,73,0,0
+1771865814018,71,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,71,0,0
+1771865814018,75,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,75,0,0
+1771865814106,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865814090,107,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,107,0,0
+1771865814094,103,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,103,0,0
+1771865814090,111,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,111,0,0
+1771865814188,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,43,0,0
+1771865814445,69,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,67,0,0
+1771865814613,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865814639,25,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,25,0,0
+1771865814639,26,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,26,0,0
+1771865814665,66,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,66,0,0
+1771865814664,70,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,70,0,0
+1771865814731,91,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,91,0,0
+1771865814735,87,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,87,0,0
+1771865814974,54,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,52,0,0
+1771865815035,12,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,12,0,0
+1771865815035,14,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,14,0,0
+1771865815038,15,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,15,0,0
+1771865815038,18,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,18,0,0
+1771865815047,71,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,71,0,0
+1771865815050,71,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,71,0,0
+1771865815053,72,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,72,0,0
+1771865815056,69,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,69,0,0
+1771865815118,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865815128,96,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,94,0,0
+1771865815118,151,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,151,0,0
+1771865815228,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865815125,192,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,192,0,0
+1771865815125,192,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,192,0,0
+1771865815121,196,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,196,0,0
+1771865815287,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,43,0,0
+1771865815339,101,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,99,0,0
+1771865815344,138,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,136,0,0
+1771865815506,62,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,57,0,0
+1771865815926,20,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,20,0,0
+1771865815944,68,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,65,0,0
+1771865815947,126,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,126,0,0
+1771865816074,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865816198,11,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,11,0,0
+1771865816202,9,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,9,0,0
+1771865816198,14,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,14,0,0
+1771865816217,53,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,51,0,0
+1771865816211,103,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,103,0,0
+1771865816210,104,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,104,0,0
+1771865816212,105,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,105,0,0
+1771865816317,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865816314,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865816314,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865816394,48,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,0
+1771865816475,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,48,0,0
+1771865816774,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865816823,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865816823,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865816831,68,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,68,0,0
+1771865816830,69,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,69,0,0
+1771865816913,60,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,58,0,0
+1771865816899,114,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,114,0,0
+1771865816899,118,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,118,0,0
+1771865817159,54,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,52,0,0
+1771865817163,94,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,92,0,0
+1771865817270,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865817276,65,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,65,0,0
+1771865817310,45,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,43,0,0
+1771865817318,46,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,46,0,0
+1771865817318,47,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,47,0,0
+1771865817318,48,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,48,0,0
+1771865817341,76,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,76,0,0
+1771865817366,72,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,72,0,0
+1771865817365,73,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,73,0,0
+1771865817364,74,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,74,0,0
+1771865817438,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865817438,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865817438,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865817594,56,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,53,0,0
+1771865817856,54,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,53,0,0
+1771865817926,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865817968,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865818121,45,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,43,0,0
+1771865818138,32,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,32,0,0
+1771865818170,71,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,71,0,0
+1771865818242,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865818378,11,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,11,0,0
+1771865818378,13,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,13,0,0
+1771865818378,14,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,14,0,0
+1771865818401,53,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,51,0,0
+1771865818391,106,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,106,0,0
+1771865818392,105,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,105,0,0
+1771865818389,108,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,108,0,0
+1771865818497,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865818497,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865818516,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865818497,68,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,68,0,0
+1771865818709,55,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,53,0,0
+1771865819014,9,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,9,0,0
+1771865819017,11,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,11,0,0
+1771865819048,56,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,51,0,0
+1771865819023,122,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,122,0,0
+1771865819028,117,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,117,0,0
+1771865819145,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865819145,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865819419,22,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,22,0,0
+1771865819502,10,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,9,0,0
+1771865819502,10,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,10,0,0
+1771865819502,12,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,12,0,0
+1771865819442,79,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,79,0,0
+1771865819512,65,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,65,0,0
+1771865819512,69,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,69,0,0
+1771865819514,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865819521,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865819578,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865819581,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865819581,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865819661,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,43,0,0
+1771865819759,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865819856,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865819974,52,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,49,0,0
+1771865820059,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865820304,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865820310,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865820377,68,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,68,0,0
+1771865820516,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865820562,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865820562,11,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,11,0,0
+1771865820566,13,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,13,0,0
+1771865820570,71,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,71,0,0
+1771865820573,68,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,68,0,0
+1771865820579,66,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,66,0,0
+1771865820642,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865820642,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865820645,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865821006,56,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,55,0,0
+1771865821112,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865821139,61,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,59,0,0
+1771865821206,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865821206,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865821214,47,POST /api/auth/register,400,Bad Request,TG - Authenticated Users 2-9,text,true,,171,326,10,20,http://localhost:8000/api/auth/register,47,0,0
+1771865821213,72,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,72,0,0
+1771865821261,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865821277,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865821285,96,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,96,0,0
+1771865821455,69,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,67,0,0
+1771865821583,7,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,7,0,0
+1771865821639,24,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,24,0,0
+1771865821646,22,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,22,0,0
+1771865821646,23,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,23,0,0
+1771865821590,87,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,86,0,0
+1771865821663,74,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,74,0,0
+1771865821669,72,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,72,0,0
+1771865821668,73,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,73,0,0
+1771865821677,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,64,0,0
+1771865821737,71,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,71,0,0
+1771865821741,72,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,72,0,0
+1771865821741,72,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,72,0,0
+1771865821826,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865822013,64,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,61,0,0
+1771865822190,59,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,57,0,0
+1771865822447,11,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,11,0,0
+1771865822458,87,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,87,0,0
+1771865822504,50,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865822544,58,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,56,0,0
+1771865822545,100,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,100,0,0
+1771865822705,23,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,23,0,0
+1771865822705,24,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,24,0,0
+1771865822705,28,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,28,0,0
+1771865822730,78,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,78,0,0
+1771865822728,84,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,84,0,0
+1771865822734,78,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,78,0,0
+1771865822785,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865822809,88,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,88,0,0
+1771865822813,84,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,84,0,0
+1771865822813,84,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,84,0,0
+1771865823004,71,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,69,0,0
+1771865823070,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,0
+1771865823196,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865823304,68,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,66,0,0
+1771865823322,53,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,53,0,0
+1771865823382,6,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,6,0,0
+1771865823375,74,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,74,0,0
+1771865823388,68,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,68,0,0
+1771865823449,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865823457,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865823742,19,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,19,0,0
+1771865823810,11,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,11,0,0
+1771865823813,14,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,14,0,0
+1771865823813,14,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,14,0,0
+1771865823761,83,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,83,0,0
+1771865823821,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865823827,65,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,65,0,0
+1771865823828,68,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,68,0,0
+1771865823845,63,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,63,0,0
+1771865823867,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865823889,83,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,83,0,0
+1771865823892,80,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,80,0,0
+1771865823897,79,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,79,0,0
+1771865824102,72,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,70,0,0
+1771865824187,45,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,43,0,0
+1771865824318,64,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,62,0,0
+1771865824645,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865824653,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865824698,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,44,0,0
+1771865824742,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,46,0,0
+1771865824721,111,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,111,0,0
+1771865824898,16,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,16,0,0
+1771865824898,17,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,17,0,0
+1771865824898,27,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,27,0,0
+1771865824916,73,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,73,0,0
+1771865824925,67,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,67,0,0
+1771865824914,78,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,78,0,0
+1771865824999,49,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,47,0,0
+1771865824993,95,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,95,0,0
+1771865824989,104,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,104,0,0
+1771865824993,100,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,100,0,0
+1771865825488,47,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865825511,69,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,67,0,0
+1771865825517,66,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,66,0,0
+1771865825513,71,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,71,0,0
+1771865825583,66,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,66,0,0
+1771865825584,68,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,68,0,0
+1771865825649,59,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,59,0,0
+1771865825652,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,60,0,0
+1771865825910,21,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,21,0,0
+1771865825973,8,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,8,0,0
+1771865825973,11,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,11,0,0
+1771865825978,12,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,10,20,http://localhost:8000/api/me/cars,12,0,0
+1771865825932,72,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,72,0,0
+1771865825982,62,POST /api/auth/register,400,Bad Request,TG - Authenticated Users 2-1,text,true,,171,326,10,20,http://localhost:8000/api/auth/register,62,0,0
+1771865825984,72,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,72,0,0
+1771865825991,73,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,10,20,http://localhost:8000/api/auth/register,73,0,0
+1771865826005,67,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,67,0,0
+1771865826035,48,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,45,0,0
+1771865826056,89,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,89,0,0
+1771865826044,101,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,101,0,0
+1771865826064,81,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,10,20,http://localhost:8000/api/auth/login,81,0,0
+1771865826529,58,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,56,0,0
+1771865826538,94,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,92,0,0
+1771865826653,68,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-8,text,true,,292069,190,10,20,http://localhost:8000/api/public/stats,63,0,0
+1771865826786,48,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,9,19,http://localhost:8000/api/public/stats,45,0,0
+1771865826816,61,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,9,19,http://localhost:8000/api/public/stats,59,0,0
+1771865826832,91,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-10,text,true,,292069,190,9,19,http://localhost:8000/api/public/stats,89,0,0
+1771865826833,91,GET /api/me/cars,200,OK,TG - Authenticated Users 2-7,text,true,,126,364,10,18,http://localhost:8000/api/me/cars,91,0,0
+1771865826924,72,POST /api/auth/register,201,Created,TG - Authenticated Users 2-7,text,true,,180,326,10,18,http://localhost:8000/api/auth/register,72,0,0
+1771865826980,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,8,18,http://localhost:8000/api/public/stats,44,0,0
+1771865826996,88,POST /api/auth/login,200,OK,TG - Authenticated Users 2-7,text,true,,322,286,10,18,http://localhost:8000/api/auth/login,88,0,0
+1771865827089,5,GET /api/me/cars,200,OK,TG - Authenticated Users 2-3,text,true,,126,364,9,17,http://localhost:8000/api/me/cars,5,0,0
+1771865827093,9,GET /api/me/cars,200,OK,TG - Authenticated Users 2-4,text,true,,126,364,9,17,http://localhost:8000/api/me/cars,9,0,0
+1771865827093,13,GET /api/me/cars,200,OK,TG - Authenticated Users 2-8,text,true,,126,364,9,17,http://localhost:8000/api/me/cars,13,0,0
+1771865827095,69,POST /api/auth/register,201,Created,TG - Authenticated Users 2-3,text,true,,180,326,9,17,http://localhost:8000/api/auth/register,69,0,0
+1771865827103,65,POST /api/auth/register,201,Created,TG - Authenticated Users 2-4,text,true,,180,326,9,17,http://localhost:8000/api/auth/register,65,0,0
+1771865827107,65,POST /api/auth/register,201,Created,TG - Authenticated Users 2-8,text,true,,180,326,9,17,http://localhost:8000/api/auth/register,65,0,0
+1771865827164,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-3,text,true,,322,286,9,17,http://localhost:8000/api/auth/login,60,0,0
+1771865827168,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-4,text,true,,322,286,8,16,http://localhost:8000/api/auth/login,60,0,0
+1771865827172,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-8,text,true,,322,286,7,15,http://localhost:8000/api/auth/login,60,0,0
+1771865827385,72,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-7,text,true,,292069,190,8,14,http://localhost:8000/api/public/stats,70,0,0
+1771865827709,16,GET /api/me/cars,200,OK,TG - Authenticated Users 2-5,text,true,,126,364,6,13,http://localhost:8000/api/me/cars,16,0,0
+1771865827713,20,GET /api/me/cars,200,OK,TG - Authenticated Users 2-9,text,true,,126,364,6,13,http://localhost:8000/api/me/cars,20,0,0
+1771865827725,77,POST /api/auth/register,201,Created,TG - Authenticated Users 2-5,text,true,,180,326,6,13,http://localhost:8000/api/auth/register,77,0,0
+1771865827733,72,POST /api/auth/register,201,Created,TG - Authenticated Users 2-9,text,true,,180,326,6,13,http://localhost:8000/api/auth/register,72,0,0
+1771865827802,82,POST /api/auth/login,200,OK,TG - Authenticated Users 2-5,text,true,,322,286,6,13,http://localhost:8000/api/auth/login,82,0,0
+1771865827806,82,POST /api/auth/login,200,OK,TG - Authenticated Users 2-9,text,true,,322,286,5,12,http://localhost:8000/api/auth/login,82,0,0
+1771865828073,21,GET /api/me/cars,200,OK,TG - Authenticated Users 2-2,text,true,,126,364,4,11,http://localhost:8000/api/me/cars,21,0,0
+1771865828146,10,GET /api/me/cars,200,OK,TG - Authenticated Users 2-1,text,true,,126,364,4,11,http://localhost:8000/api/me/cars,10,0,0
+1771865828146,12,GET /api/me/cars,200,OK,TG - Authenticated Users 2-6,text,true,,126,364,4,11,http://localhost:8000/api/me/cars,12,0,0
+1771865828146,16,GET /api/me/cars,200,OK,TG - Authenticated Users 2-10,text,true,,126,364,4,11,http://localhost:8000/api/me/cars,16,0,0
+1771865828095,85,POST /api/auth/register,201,Created,TG - Authenticated Users 2-2,text,true,,180,326,4,11,http://localhost:8000/api/auth/register,85,0,0
+1771865828156,68,POST /api/auth/register,201,Created,TG - Authenticated Users 2-1,text,true,,180,326,4,11,http://localhost:8000/api/auth/register,68,0,0
+1771865828158,70,POST /api/auth/register,201,Created,TG - Authenticated Users 2-6,text,true,,180,326,4,11,http://localhost:8000/api/auth/register,70,0,0
+1771865828162,66,POST /api/auth/register,201,Created,TG - Authenticated Users 2-10,text,true,,180,326,4,11,http://localhost:8000/api/auth/register,66,0,0
+1771865828180,64,POST /api/auth/login,200,OK,TG - Authenticated Users 2-2,text,true,,322,286,4,11,http://localhost:8000/api/auth/login,64,0,0
+1771865828224,61,POST /api/auth/login,200,OK,TG - Authenticated Users 2-1,text,true,,322,286,3,10,http://localhost:8000/api/auth/login,61,0,0
+1771865828228,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-6,text,true,,322,286,2,9,http://localhost:8000/api/auth/login,60,0,0
+1771865828228,60,POST /api/auth/login,200,OK,TG - Authenticated Users 2-10,text,true,,322,286,2,9,http://localhost:8000/api/auth/login,60,0,0
+1771865828573,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-2,text,true,,292069,190,7,7,http://localhost:8000/api/public/stats,44,0,0
+1771865828731,58,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-1,text,true,,292069,190,6,6,http://localhost:8000/api/public/stats,56,0,0
+1771865828739,92,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-9,text,true,,292069,190,5,5,http://localhost:8000/api/public/stats,90,0,0
+1771865828840,46,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-5,text,true,,292069,190,4,4,http://localhost:8000/api/public/stats,43,0,0
+1771865828886,50,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-3,text,true,,292069,190,3,3,http://localhost:8000/api/public/stats,48,0,0
+1771865828902,77,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-4,text,true,,292069,190,2,2,http://localhost:8000/api/public/stats,75,0,0
+1771865828927,96,GET /api/public/stats,200,OK,TG - Public Dashboard Viewers 1-6,text,true,,292069,190,1,1,http://localhost:8000/api/public/stats,94,0,0
