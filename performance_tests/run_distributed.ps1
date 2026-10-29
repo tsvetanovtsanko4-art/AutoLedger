@@ -1,26 +1,21 @@
-Write-Host "Starting Distributed JMeter Load Test" -ForegroundColor Cyan
-Write-Host "Spinning up 1 Master and 2 Worker nodes via Docker Compose..."
+<#
+.SYNOPSIS
+    Runs the load test from two Docker workers. Load per worker is set through
+    environment variables read by docker-compose.jmeter.yml, e.g.
+        $env:DRIVERS = 100; .\run_distributed.ps1
+#>
+$ErrorActionPreference = "Stop"
+Set-Location $PSScriptRoot
 
-$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$out = Join-Path $PSScriptRoot "results\distributed"
+if (Test-Path $out) { Remove-Item -Recurse -Force $out }
+New-Item -ItemType Directory -Force $out | Out-Null
 
-# Ensure report output directory does not exist to avoid merge conflicts
-$ReportPath = "$ScriptDir\report_distributed"
-if (Test-Path $ReportPath) {
-    Write-Host "Cleaning up old report directory..."
-    Remove-Item -Recurse -Force $ReportPath
+try {
+    docker compose -f docker-compose.jmeter.yml up --build --abort-on-container-exit --exit-code-from controller
+    if ($LASTEXITCODE -ne 0) { throw "Distributed run failed (exit code $LASTEXITCODE)" }
+    Write-Host "Report: $out\report\index.html" -ForegroundColor Green
 }
-
-$CsvPath = "$ScriptDir\results_distributed.csv"
-if (Test-Path $CsvPath) {
-    Remove-Item -Force $CsvPath
+finally {
+    docker compose -f docker-compose.jmeter.yml down
 }
-
-Set-Location $ScriptDir
-
-Write-Host "Running docker compose up..."
-docker compose -f docker-compose.jmeter.yml up --build --abort-on-container-exit
-
-Write-Host "Tearing down workers..."
-docker compose -f docker-compose.jmeter.yml down
-
-Write-Host "Done! Check the generated HTML report locally." -ForegroundColor Green

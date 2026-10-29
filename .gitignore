@@ -1,4 +1,28 @@
-# Certificates - keep folder, ignore actual cert files
-client/certs/*.pem
-client/certs/*.crt
-client/certs/*.key
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Local databases
+*.db
+
+# Local HTTPS certificates created by vite-plugin-mkcert
+client/certs/*
+!client/certs/.gitkeep
+
+# Load test output
+performance_tests/results*/
+performance_tests/*.jtl
+performance_tests/*.log
+
+# Playwright
+client/test-results/
+client/playwright-report/
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+.env

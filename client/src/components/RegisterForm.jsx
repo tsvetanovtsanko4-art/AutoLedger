@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { apiErrorMessage } from '../api';
 import { useAuth } from '../context/AuthContext';
-
-// RFC-5321 inspired email regex — covers the vast majority of valid addresses
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+import { emailError, passwordError } from '../validation';
 
 const RegisterForm = () => {
     const { register } = useAuth();
@@ -19,22 +18,11 @@ const RegisterForm = () => {
         e.preventDefault();
         setError(null);
 
-        // --- Field-level validation ---
         const errors = {};
-
-        if (!email.trim()) {
-            errors.email = 'Email is required.';
-        } else if (/\s/.test(email)) {
-            errors.email = 'Email must not contain spaces.';
-        } else if (!EMAIL_REGEX.test(email.trim())) {
-            errors.email = 'Please enter a valid email address (e.g. you@example.com).';
-        }
-
-        if (!password) {
-            errors.password = 'Password is required.';
-        } else if (/\s/.test(password)) {
-            errors.password = 'Password must not contain spaces.';
-        }
+        const emailProblem = emailError(email);
+        if (emailProblem) errors.email = emailProblem;
+        const passwordProblem = passwordError(password);
+        if (passwordProblem) errors.password = passwordProblem;
 
         if (!confirm) {
             errors.confirm = 'Please confirm your password.';
@@ -55,7 +43,7 @@ const RegisterForm = () => {
             await register(email.trim(), password);
             navigate('/home');
         } catch (err) {
-            setError(err.response?.data?.detail || 'Registration failed.');
+            setError(apiErrorMessage(err, 'Registration failed.'));
         } finally {
             setLoading(false);
         }

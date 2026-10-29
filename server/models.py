@@ -1,6 +1,10 @@
-from sqlalchemy import Column, Integer, String, Date, Float, ForeignKey, JSON, Enum, Boolean
-from sqlalchemy.orm import relationship
 import enum
+from datetime import date
+from typing import Optional
+
+from sqlalchemy import JSON, ForeignKey
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+
 from .database import Base
 
 
@@ -33,104 +37,102 @@ class DriveType(str, enum.Enum):
 class User(Base):
     __tablename__ = "users"
 
-    id = Column(Integer, primary_key=True, index=True)
-    email = Column(String, unique=True, index=True)
-    hashed_password = Column(String)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    email: Mapped[str] = mapped_column(unique=True, index=True)
+    hashed_password: Mapped[str]
 
-    cars = relationship("Car", back_populates="owner")
+    cars: Mapped[list["Car"]] = relationship(back_populates="owner")
 
 
 class Car(Base):
     __tablename__ = "cars"
 
-    id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.id"))
-    plate = Column(String, index=True, unique=True)
-    make = Column(String)
-    model = Column(String)
-    model_year = Column(Integer, nullable=True)
-    current_odometer = Column(Integer, default=0)
-    is_favorite = Column(Boolean, default=False)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    plate: Mapped[str] = mapped_column(unique=True, index=True)
+    make: Mapped[str]
+    model: Mapped[str]
+    model_year: Mapped[Optional[int]]
+    current_odometer: Mapped[int] = mapped_column(default=0)
+    is_favorite: Mapped[bool] = mapped_column(default=False)
+    vin: Mapped[Optional[str]] = mapped_column(unique=True)
+    engine_model: Mapped[Optional[str]]
+    engine_volume: Mapped[Optional[float]]
+    transmission: Mapped[Optional[TransmissionType]]
+    drive_type: Mapped[Optional[DriveType]]
+    tire_size: Mapped[Optional[str]]
 
-    # Extended fields
-    vin = Column(String, nullable=True, unique=True)
-    engine_model = Column(String, nullable=True)
-    engine_volume = Column(Float, nullable=True)
-    transmission = Column(Enum(TransmissionType), nullable=True)
-    drive_type = Column(Enum(DriveType), nullable=True)
-    tire_size = Column(String, nullable=True)
-
-    owner = relationship("User", back_populates="cars")
-    insurances = relationship("Insurance", back_populates="car", cascade="all, delete-orphan")
-    inspections = relationship("Inspection", back_populates="car", cascade="all, delete-orphan")
-    services = relationship("Service", back_populates="car", cascade="all, delete-orphan")
-    refuelings = relationship("Refueling", back_populates="car", cascade="all, delete-orphan")
-    vignettes = relationship("Vignette", back_populates="car", cascade="all, delete-orphan")
+    owner: Mapped[User] = relationship(back_populates="cars")
+    insurances: Mapped[list["Insurance"]] = relationship(back_populates="car", cascade="all, delete-orphan")
+    inspections: Mapped[list["Inspection"]] = relationship(back_populates="car", cascade="all, delete-orphan")
+    services: Mapped[list["Service"]] = relationship(back_populates="car", cascade="all, delete-orphan")
+    refuelings: Mapped[list["Refueling"]] = relationship(back_populates="car", cascade="all, delete-orphan")
+    vignettes: Mapped[list["Vignette"]] = relationship(back_populates="car", cascade="all, delete-orphan")
 
 
 class Insurance(Base):
     __tablename__ = "insurances"
 
-    id = Column(Integer, primary_key=True, index=True)
-    car_id = Column(Integer, ForeignKey("cars.id"))
-    type = Column(Enum(InsuranceType))
-    renewed_date = Column(Date)
-    expiry_date = Column(Date)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    car_id: Mapped[int] = mapped_column(ForeignKey("cars.id"), index=True)
+    type: Mapped[InsuranceType]
+    renewed_date: Mapped[date]
+    expiry_date: Mapped[date]
 
-    car = relationship("Car", back_populates="insurances")
+    car: Mapped[Car] = relationship(back_populates="insurances")
 
 
 class Inspection(Base):
     __tablename__ = "inspections"
 
-    id = Column(Integer, primary_key=True, index=True)
-    car_id = Column(Integer, ForeignKey("cars.id"))
-    renewed_date = Column(Date)
-    expiry_date = Column(Date)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    car_id: Mapped[int] = mapped_column(ForeignKey("cars.id"), index=True)
+    renewed_date: Mapped[date]
+    expiry_date: Mapped[date]
 
-    car = relationship("Car", back_populates="inspections")
+    car: Mapped[Car] = relationship(back_populates="inspections")
 
 
 class Service(Base):
     __tablename__ = "services"
 
-    id = Column(Integer, primary_key=True, index=True)
-    car_id = Column(Integer, ForeignKey("cars.id"))
-    date = Column(Date)
-    parts_list = Column(JSON)
-    part_numbers = Column(JSON)
-    next_service_date = Column(Date, nullable=True)
-    next_service_odometer = Column(Integer, nullable=True)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    car_id: Mapped[int] = mapped_column(ForeignKey("cars.id"), index=True)
+    date: Mapped[date]
+    parts_list: Mapped[Optional[list]] = mapped_column(JSON)
+    part_numbers: Mapped[Optional[list]] = mapped_column(JSON)
+    next_service_date: Mapped[Optional[date]]
+    next_service_odometer: Mapped[Optional[int]]
 
-    car = relationship("Car", back_populates="services")
+    car: Mapped[Car] = relationship(back_populates="services")
 
 
 class Refueling(Base):
     __tablename__ = "refuelings"
 
-    id = Column(Integer, primary_key=True, index=True)
-    car_id = Column(Integer, ForeignKey("cars.id"))
-    date = Column(Date)
-    fuel_type = Column(Enum(FuelType))
-    cost_eur = Column(Float)
-    quantity_liters = Column(Float, nullable=True)
-    odometer = Column(Integer)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    car_id: Mapped[int] = mapped_column(ForeignKey("cars.id"), index=True)
+    date: Mapped[date]
+    fuel_type: Mapped[FuelType]
+    cost_eur: Mapped[float]
+    quantity_liters: Mapped[Optional[float]]
+    odometer: Mapped[int]
 
-    car = relationship("Car", back_populates="refuelings")
+    car: Mapped[Car] = relationship(back_populates="refuelings")
 
 
 class Vignette(Base):
     __tablename__ = "vignettes"
 
-    id = Column(Integer, primary_key=True, index=True)
-    car_id = Column(Integer, ForeignKey("cars.id"))
-    country_code = Column(String)
-    date_start = Column(Date)
-    date_end = Column(Date)
-    price = Column(Float, nullable=True)
-    currency = Column(String, default="EUR")
-    status = Column(String, nullable=True)
-    vehicle_type = Column(String, nullable=True)
-    vehicle_class = Column(String, nullable=True)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    car_id: Mapped[int] = mapped_column(ForeignKey("cars.id"), index=True)
+    country_code: Mapped[str]
+    date_start: Mapped[date]
+    date_end: Mapped[date]
+    price: Mapped[Optional[float]]
+    currency: Mapped[str] = mapped_column(default="EUR")
+    status: Mapped[Optional[str]]
+    vehicle_type: Mapped[Optional[str]]
+    vehicle_class: Mapped[Optional[str]]
 
-    car = relationship("Car", back_populates="vignettes")
+    car: Mapped[Car] = relationship(back_populates="vignettes")

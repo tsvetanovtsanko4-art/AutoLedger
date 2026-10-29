@@ -1,22 +1,19 @@
-# Base stage
-FROM python:3.10-slim AS base
+FROM python:3.13-slim AS base
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1
 WORKDIR /app
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt server/requirements.txt
+RUN pip install -r server/requirements.txt
 COPY . server/
+RUN useradd --create-home app
+USER app
 EXPOSE 8000
+HEALTHCHECK --interval=10s --timeout=3s --retries=5 \
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"
 
-# Development stage
 FROM base AS development
-# Install dev dependencies if any
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
-# Reload is handled by command in compose or overridden here
-CMD ["python", "-m", "uvicorn", "server.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+CMD ["sh", "-c", "alembic -c server/alembic.ini upgrade head && uvicorn server.main:app --host 0.0.0.0 --port 8000 --reload"]
 
-# Production stage
 FROM base AS production
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
-# No reload for production
-CMD ["python", "-m", "uvicorn", "server.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["sh", "-c", "alembic -c server/alembic.ini upgrade head && uvicorn server.main:app --host 0.0.0.0 --port 8000 --workers 4 --proxy-headers"]

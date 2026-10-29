@@ -1,25 +1,27 @@
+# One controller and two load generators. Each worker logs in a different
+# range of seeded users (user_offset) so their drivers never share a car.
+x-worker: &worker
+  build: .
+  image: autoledger-jmeter:5.6.3
+
 services:
-  jmeter-master:
-    image: justb4/jmeter:5.5
-    container_name: jmeter-master
+  worker1:
+    <<: *worker
+    command: jmeter-server -Dserver.rmi.ssl.disable=true -Dserver.rmi.localport=50000 -Juser_offset=0
+
+  worker2:
+    <<: *worker
+    command: jmeter-server -Dserver.rmi.ssl.disable=true -Dserver.rmi.localport=50000 -Juser_offset=500
+
+  controller:
+    <<: *worker
     volumes:
-      - ./:/jmeter_tests
+      - ./:/tests
+    depends_on: [worker1, worker2]
     command: >
-      -n -t /jmeter_tests/car_tracker_load_test.jmx  -R jmeter-worker1,jmeter-worker2 -l /jmeter_tests/results_distributed.csv  -e -o /jmeter_tests/report_distributed  -Jhost=host.docker.internal  -Jport=8000  -Jthreads=5  -Jrampup=5  -Jduration=60
-    depends_on:
-      - jmeter-worker1
-      - jmeter-worker2
-
-  jmeter-worker1:
-    image: justb4/jmeter:5.5
-    container_name: jmeter-worker1
-    entrypoint: jmeter-server -Dserver.rmi.ssl.disable=true -Dserver.rmi.localport=1099
-    ports:
-      - "1099:1099"
-
-  jmeter-worker2:
-    image: justb4/jmeter:5.5
-    container_name: jmeter-worker2
-    entrypoint: jmeter-server -Dserver.rmi.ssl.disable=true -Dserver.rmi.localport=1099
-    ports:
-      - "1100:1099"
+      jmeter -n -t autoledger_load_test.jmx
+      -R worker1,worker2 -Dserver.rmi.ssl.disable=true
+      -l results/distributed/results.jtl -e -o results/distributed/report
+      -Ghost=${TARGET_HOST:-host.docker.internal} -Gport=${TARGET_PORT:-8000}
+      -Gvisitors=${VISITORS:-15} -Gdrivers=${DRIVERS:-25} -Gsignups=${SIGNUPS:-2}
+      -Grampup=${RAMPUP:-60} -Gduration=${DURATION:-300}

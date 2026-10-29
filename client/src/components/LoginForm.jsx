@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { apiErrorMessage } from '../api';
 import { useAuth } from '../context/AuthContext';
-
-// Same email regex used in RegisterForm
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+import { emailError, passwordError } from '../validation';
 
 const LoginForm = () => {
     const { login } = useAuth();
@@ -18,22 +17,11 @@ const LoginForm = () => {
         e.preventDefault();
         setError(null);
 
-        // --- Field-level validation ---
         const errors = {};
-
-        if (!email.trim()) {
-            errors.email = 'Email is required.';
-        } else if (/\s/.test(email)) {
-            errors.email = 'Email must not contain spaces.';
-        } else if (!EMAIL_REGEX.test(email.trim())) {
-            errors.email = 'Please enter a valid email address (e.g. you@example.com).';
-        }
-
-        if (!password) {
-            errors.password = 'Password is required.';
-        } else if (/\s/.test(password)) {
-            errors.password = 'Password must not contain spaces.';
-        }
+        const emailProblem = emailError(email);
+        if (emailProblem) errors.email = emailProblem;
+        const passwordProblem = passwordError(password);
+        if (passwordProblem) errors.password = passwordProblem;
 
         if (Object.keys(errors).length > 0) {
             setFieldErrors(errors);
@@ -46,7 +34,7 @@ const LoginForm = () => {
             await login(email.trim(), password);
             navigate('/home');
         } catch (err) {
-            setError(err.response?.data?.detail || 'Login failed. Check your credentials.');
+            setError(apiErrorMessage(err, 'Login failed. Check your credentials.'));
         } finally {
             setLoading(false);
         }

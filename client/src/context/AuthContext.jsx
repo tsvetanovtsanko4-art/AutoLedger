@@ -6,18 +6,23 @@ const AuthContext = createContext(null);
 export const AuthProvider = ({ children }) => {
     const [token, setToken] = useState(() => localStorage.getItem('token'));
     const [user, setUser] = useState(null);
-    const [loading, setLoading] = useState(true);
+    // Only a stored token needs verifying, so there is nothing to wait for without one.
+    const [loading, setLoading] = useState(() => Boolean(localStorage.getItem('token')));
+
+    const logout = () => {
+        localStorage.removeItem('token');
+        delete api.defaults.headers.common['Authorization'];
+        setToken(null);
+        setUser(null);
+    };
 
     useEffect(() => {
-        if (token) {
-            api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-            api.get('/me')
-                .then(res => setUser(res.data))
-                .catch(() => { logout(); })
-                .finally(() => setLoading(false));
-        } else {
-            setLoading(false);
-        }
+        if (!token) return;
+        api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+        api.get('/me')
+            .then(res => setUser(res.data))
+            .catch(logout)
+            .finally(() => setLoading(false));
     }, [token]);
 
     const login = async (email, password) => {
@@ -38,13 +43,6 @@ export const AuthProvider = ({ children }) => {
     const register = async (email, password) => {
         await api.post('/auth/register', { email, password });
         await login(email, password);
-    };
-
-    const logout = () => {
-        localStorage.removeItem('token');
-        delete api.defaults.headers.common['Authorization'];
-        setToken(null);
-        setUser(null);
     };
 
     return (

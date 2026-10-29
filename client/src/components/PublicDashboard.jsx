@@ -3,7 +3,6 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import api from '../api';
 import { Link } from 'react-router-dom';
 
-// Animated skeleton placeholder
 const Skeleton = ({ className = '' }) => (
     <div className={`animate-pulse bg-gray-200 rounded-xl ${className}`} />
 );

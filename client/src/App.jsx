@@ -1,17 +1,19 @@
-import React from 'react';
+import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
-import Dashboard from './components/Dashboard';
-import CarForm from './components/CarForm';
-import InsuranceForm from './components/InsuranceForm';
-import ServiceForm from './components/ServiceForm';
-import RefuelingForm from './components/RefuelingForm';
-import CarDetails from './components/CarDetails';
 import LoginForm from './components/LoginForm';
 import RegisterForm from './components/RegisterForm';
-import PublicDashboard from './components/PublicDashboard';
-import AddVignette from './components/AddVignette';
-import CarEditForm from './components/CarEditForm';
+
+// Pages load on demand so the charting library isn't part of every page's download.
+const PublicDashboard = lazy(() => import('./components/PublicDashboard'));
+const Dashboard = lazy(() => import('./components/Dashboard'));
+const CarForm = lazy(() => import('./components/CarForm'));
+const CarDetails = lazy(() => import('./components/CarDetails'));
+const CarEditForm = lazy(() => import('./components/CarEditForm'));
+const InsuranceForm = lazy(() => import('./components/InsuranceForm'));
+const ServiceForm = lazy(() => import('./components/ServiceForm'));
+const RefuelingForm = lazy(() => import('./components/RefuelingForm'));
+const AddVignette = lazy(() => import('./components/AddVignette'));
 
 const ProtectedRoute = ({ children }) => {
   const { token, loading } = useAuth();
@@ -55,25 +57,25 @@ function App() {
         <div className="min-h-screen bg-gray-50 font-sans text-gray-900">
           <NavBar />
           <main className="container mx-auto p-4 md:p-8">
-            <Routes>
-              {/* Public Routes */}
-              <Route path="/" element={<PublicDashboard />} />
-              <Route path="/login" element={<LoginForm />} />
-              <Route path="/register" element={<RegisterForm />} />
+            <Suspense fallback={<div className="text-center p-20 text-gray-400">Loading...</div>}>
+              <Routes>
+                <Route path="/" element={<PublicDashboard />} />
+                <Route path="/login" element={<LoginForm />} />
+                <Route path="/register" element={<RegisterForm />} />
 
-              {/* Protected Protected Routes */}
-              <Route path="/home" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-              <Route path="/add-car" element={<ProtectedRoute><CarForm /></ProtectedRoute>} />
-              <Route path="/cars/:id" element={<ProtectedRoute><CarDetails /></ProtectedRoute>} />
-              <Route path="/cars/:id/add-insurance" element={<ProtectedRoute><InsuranceForm /></ProtectedRoute>} />
-              <Route path="/cars/:id/add-service" element={<ProtectedRoute><ServiceForm /></ProtectedRoute>} />
-              <Route path="/cars/:id/add-refueling" element={<ProtectedRoute><RefuelingForm /></ProtectedRoute>} />
-              <Route path="/cars/:id/add-vignette" element={<ProtectedRoute><AddVignette /></ProtectedRoute>} />
-              <Route path="/cars/:id/edit" element={<ProtectedRoute><CarEditForm /></ProtectedRoute>} />
+                {/* Signed-in routes */}
+                <Route path="/home" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+                <Route path="/add-car" element={<ProtectedRoute><CarForm /></ProtectedRoute>} />
+                <Route path="/cars/:id" element={<ProtectedRoute><CarDetails /></ProtectedRoute>} />
+                <Route path="/cars/:id/add-insurance" element={<ProtectedRoute><InsuranceForm /></ProtectedRoute>} />
+                <Route path="/cars/:id/add-service" element={<ProtectedRoute><ServiceForm /></ProtectedRoute>} />
+                <Route path="/cars/:id/add-refueling" element={<ProtectedRoute><RefuelingForm /></ProtectedRoute>} />
+                <Route path="/cars/:id/add-vignette" element={<ProtectedRoute><AddVignette /></ProtectedRoute>} />
+                <Route path="/cars/:id/edit" element={<ProtectedRoute><CarEditForm /></ProtectedRoute>} />
 
-              {/* Catch-all */}
-              <Route path="*" element={<Navigate to="/" />} />
-            </Routes>
+                <Route path="*" element={<Navigate to="/" />} />
+              </Routes>
+            </Suspense>
           </main>
         </div>
       </Router>

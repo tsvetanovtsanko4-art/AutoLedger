@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import api from '../api';
+import { consumptionPerStop } from '../consumption';
 
 const CarDetails = () => {
     const { id } = useParams();
@@ -66,12 +67,8 @@ const CarDetails = () => {
                     <h2 className="text-xl font-bold mb-4 text-gray-700">Refueling History</h2>
                     {car.refuelings && car.refuelings.length > 0 ? (
                         <ul className="space-y-3">
-                            {[...car.refuelings].sort((a, b) => a.odometer - b.odometer).map((refuel, idx, arr) => {
-                                const prev = idx > 0 ? arr[idx - 1] : null;
-                                const kmDiff = prev ? refuel.odometer - prev.odometer : null;
-                                const consumption = (prev && refuel.quantity_liters && kmDiff > 0)
-                                    ? ((refuel.quantity_liters / kmDiff) * 100).toFixed(1)
-                                    : null;
+                            {consumptionPerStop(car.refuelings).map((refuel) => {
+                                const consumption = refuel.litresPer100km?.toFixed(1);
                                 return (
                                     <li key={refuel.id} className="flex justify-between items-center bg-gray-50 p-3 rounded hover:bg-gray-100 transition">
                                         <div>

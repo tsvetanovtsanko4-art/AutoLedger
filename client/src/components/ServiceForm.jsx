@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import api from '../api';
+import api, { apiErrorMessage } from '../api';
 
 const Req = () => <span className="text-red-500 ml-1">*</span>;
 
@@ -37,7 +37,7 @@ const ServiceForm = () => {
             await api.post(`/cars/${id}/services`, payload);
             navigate(`/cars/${id}`);
         } catch (err) {
-            setError(err.response?.data?.detail || 'Error logging service. Please try again.');
+            setError(apiErrorMessage(err, 'Error logging service. Please try again.'));
             console.error("Error adding service", err);
         }
     };

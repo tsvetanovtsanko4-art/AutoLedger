@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import api from '../api';
+import api, { apiErrorMessage } from '../api';
 
-const TRANSMISSIONS = ['MANUAL', 'AUTOMATIC', 'CVT', 'DCT', 'AMT'];
-const DRIVE_TYPES = ['FWD', 'RWD', 'AWD', '4WD'];
+// Must match the TransmissionType / DriveType enums on the server.
+const TRANSMISSIONS = ['Manual', 'Automatic', 'CVT', 'DCT'];
+const DRIVE_TYPES = ['FWD', 'RWD', 'AWD'];
 
 const CarEditForm = () => {
     const { id } = useParams();
@@ -43,7 +44,7 @@ const CarEditForm = () => {
                     drive_type: c.drive_type || '',
                     tire_size: c.tire_size || '',
                 });
-            } catch (err) {
+            } catch {
                 setError('Failed to load car data.');
             } finally {
                 setLoading(false);
@@ -73,7 +74,7 @@ const CarEditForm = () => {
             await api.patch(`/cars/${id}`, payload);
             navigate(`/cars/${id}`);
         } catch (err) {
-            setError(err.response?.data?.detail || 'Failed to save changes.');
+            setError(apiErrorMessage(err, 'Failed to save changes.'));
             setSaving(false);
         }
     };

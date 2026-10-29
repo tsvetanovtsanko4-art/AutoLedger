@@ -27,7 +27,6 @@ const COUNTRIES = [
     { code: "XK", name: "Kosovo" },
     { code: "ME", name: "Montenegro" },
     { code: "BA", name: "Bosnia and Herzegovina" },
-    // A simplified list for demo purposes, but includes key EU/Asia transit for BG context
 ];
 
 const AddVignette = () => {
@@ -51,9 +50,7 @@ const AddVignette = () => {
 
     const [plate, setPlate] = useState('');
 
-    // Fetch car plate for the proxy check if needed, or just ask user to input it/confirm it.
-    // Ideally we should get the car details first to get the plate.
-    // For now, let's fetch the car on mount to get the plate.
+    // The BG Toll lookup needs the car's plate.
     React.useEffect(() => {
         const fetchCar = async () => {
             try {
@@ -77,13 +74,12 @@ const AddVignette = () => {
         setError(null);
         setMsg(null);
 
-        // Reset fields
         setFormData(prev => ({
             ...prev,
             date_start: '',
             date_end: '',
             price: '',
-            currency: 'BGN', // Default to BGN for BG
+            currency: 'BGN',
             status: '',
             vehicle_type: '',
             vehicle_class: ''

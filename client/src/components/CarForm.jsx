@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import api from '../api';
+import api, { apiErrorMessage } from '../api';
 
 const REQUIRED = { plate: 'Plate Number', vin: 'VIN', make: 'Make', model: 'Model', model_year: 'Year', current_odometer: 'Odometer' };
 
@@ -27,7 +27,6 @@ const CarForm = () => {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
-    // Debounce refs for async availability checks
     const plateTimer = useRef(null);
     const vinTimer = useRef(null);
 
@@ -42,14 +41,13 @@ const CarForm = () => {
         setFormData(prev => ({ ...prev, [name]: value }));
         clearFieldError(name);
 
-        // Debounced real-time check for plate
+        // Wait until the user stops typing before asking the server.
         if (name === 'plate') {
             clearTimeout(plateTimer.current);
             if (value.trim().length >= 3) {
                 plateTimer.current = setTimeout(() => checkPlate(value.trim()), 600);
             }
         }
-        // Debounced real-time check for VIN
         if (name === 'vin') {
             clearTimeout(vinTimer.current);
             if (value.trim().length >= 5) {
@@ -66,8 +64,8 @@ const CarForm = () => {
             if (!res.data.available) {
                 setFieldError('plate', 'This plate number is already registered — please use a different one to continue.');
             }
-        } catch (_) {
-            // Silently ignore if check fails
+        } catch {
+            // The server re-checks on submit, so a failed lookup is not fatal.
         } finally {
             setChecking(prev => ({ ...prev, plate: false }));
         }
@@ -81,8 +79,8 @@ const CarForm = () => {
             if (!res.data.available) {
                 setFieldError('vin', 'This VIN is already registered — please use a different one to continue.');
             }
-        } catch (_) {
-            // Silently ignore if check fails
+        } catch {
+            // The server re-checks on submit, so a failed lookup is not fatal.
         } finally {
             setChecking(prev => ({ ...prev, vin: false }));
         }
@@ -106,7 +104,6 @@ const CarForm = () => {
             setFieldErrors(errors);
             return;
         }
-        // Prevent submit if uniqueness errors exist
         if (fieldErrors.plate || fieldErrors.vin) return;
 
         setLoading(true);
@@ -118,25 +115,18 @@ const CarForm = () => {
                 vin: formData.vin.toUpperCase(),
                 engine_volume: formData.engine_volume ? parseFloat(formData.engine_volume) : null,
                 model_year: formData.model_year ? parseInt(formData.model_year) : null,
-                // Guard against NaN — parseInt('') returns NaN which causes a 422
                 current_odometer: parseInt(formData.current_odometer) || 0,
             };
             await api.post('/cars', payload);
             navigate('/home');
         } catch (err) {
-            // FastAPI 422 returns detail as an array of objects; other errors return a string.
-            // Safely convert to a searchable string in both cases.
-            const rawDetail = err.response?.data?.detail;
-            const detail = Array.isArray(rawDetail)
-                ? rawDetail.map(e => `${e.loc?.join('.')} — ${e.msg}`).join('; ')
-                : (typeof rawDetail === 'string' ? rawDetail : '');
-
-            if (detail.toLowerCase().includes('plate')) {
+            const detail = apiErrorMessage(err, '');
+            const conflict = err.response?.status === 409;
+            if (conflict && detail.toLowerCase().includes('plate')) {
                 setFieldError('plate', 'This plate number is already registered — please use a different one to continue.');
-            } else if (detail.toLowerCase().includes('vin')) {
+            } else if (conflict && detail.toLowerCase().includes('vin')) {
                 setFieldError('vin', 'This VIN is already registered — please use a different one to continue.');
             } else if (err.response?.status === 422) {
-                // Show the specific validation message from FastAPI so the user knows which field is wrong
                 setError(`Validation error: ${detail || 'please check all required fields.'}`);
             } else {
                 setError('Failed to add car. Please check your inputs and try again.');

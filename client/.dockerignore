@@ -13,5 +13,3 @@ dist
 build
 coverage
 *.log
-
-public/index.html

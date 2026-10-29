@@ -1,25 +1,17 @@
 from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import DeclarativeBase, sessionmaker
 
-import os
+from .config import settings
 
-SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./car_tracker.db")
+connect_args = {"check_same_thread": False} if settings.database_url.startswith("sqlite") else {}
+engine = create_engine(settings.database_url, connect_args=connect_args, pool_pre_ping=True)
+SessionLocal = sessionmaker(bind=engine, autoflush=False)
 
-connect_args = {}
-if "sqlite" in SQLALCHEMY_DATABASE_URL:
-    connect_args = {"check_same_thread": False}
 
-engine = create_engine(
-    SQLALCHEMY_DATABASE_URL, connect_args=connect_args
-)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+class Base(DeclarativeBase):
+    pass
 
-Base = declarative_base()
 
 def get_db():
-    db = SessionLocal()
-    try:
+    with SessionLocal() as db:
         yield db
-    finally:
-        db.close()

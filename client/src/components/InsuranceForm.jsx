@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import api from '../api';
+import api, { apiErrorMessage } from '../api';
 
 const Req = () => <span className="text-red-500 ml-1">*</span>;
 
@@ -25,7 +25,7 @@ const InsuranceForm = () => {
             await api.post(`/cars/${id}/insurances`, formData);
             navigate(`/cars/${id}`);
         } catch (err) {
-            setError(err.response?.data?.detail || 'Error adding insurance. Please try again.');
+            setError(apiErrorMessage(err, 'Error adding insurance. Please try again.'));
             console.error("Error adding insurance", err);
         }
     };

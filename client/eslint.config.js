@@ -24,6 +24,11 @@ export default defineConfig([
     },
     rules: {
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'react-refresh/only-export-components': ['error', { allowExportNames: ['useAuth'] }],
     },
+  },
+  {
+    files: ['*.config.js', 'e2e/**/*.js'],
+    languageOptions: { globals: globals.node },
   },
 ])
